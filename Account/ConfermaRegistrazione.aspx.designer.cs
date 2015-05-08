@@ -10,7 +10,7 @@
 namespace Swimmy.Account {
     
     
-    public partial class Profilo {
+    public partial class ConfermaRegistrazione {
         
         /// <summary>
         /// Controllo form1.
@@ -22,21 +22,12 @@ namespace Swimmy.Account {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controllo userLabel.
+        /// Controllo redirectToIndex.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userLabel;
-        
-        /// <summary>
-        /// Controllo logoutButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutButton;
+        protected global::System.Web.UI.WebControls.Button redirectToIndex;
     }
 }

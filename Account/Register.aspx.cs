@@ -39,7 +39,7 @@ namespace Swimmy.Account
             txtUsername.Text = txtEmail.Text;
             // registraUtente();
             registraUtenteConSlowHash();
-           // MessageBox.Show("Registrazione avvenuta con successo.", "Registrazione OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // MessageBox.Show("Registrazione avvenuta con successo.", "Registrazione OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /*     private bool controllaInputUtente(String inputUtente)
@@ -173,7 +173,7 @@ namespace Swimmy.Account
             conn.Close();
 
             Response.BufferOutput = true;
-            Response.Redirect("~/Default.aspx", false);
+            Response.Redirect("~/Account/ConfermaRegistrazione.aspx", false);
 
 
         }

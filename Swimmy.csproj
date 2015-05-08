@@ -151,6 +151,7 @@
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ConfermaRegistrazione.aspx" />
     <Content Include="Account\Profilo.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
@@ -316,6 +317,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\ConfermaRegistrazione.aspx.cs">
+      <DependentUpon>ConfermaRegistrazione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ConfermaRegistrazione.aspx.designer.cs">
+      <DependentUpon>ConfermaRegistrazione.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Profilo.aspx.cs">
       <DependentUpon>Profilo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
