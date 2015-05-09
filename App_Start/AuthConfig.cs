@@ -17,9 +17,9 @@ namespace Swimmy
             //    consumerKey: "codice utente Twitter personale",
             //    consumerSecret: "segreto utente Twitter personale");
 
-            //OpenAuth.AuthenticationClients.AddFacebook(
-            //    appId: "ID app Facebook personale",
-            //    appSecret: "segreto app Facebook personale");
+            OpenAuth.AuthenticationClients.AddFacebook(
+                appId: "1625471347674242",
+                appSecret: "segreto app Facebook personale");
 
             //OpenAuth.AuthenticationClients.AddMicrosoft(
             //    clientId: "ID client account Microsoft personale",

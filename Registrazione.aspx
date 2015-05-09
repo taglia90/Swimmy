@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Swimmy.Account.Register" %>
+﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registrazione.aspx.cs" Inherits="Swimmy.Registrazione" %>
 
 
 
-<asp:Content runat="server" ID="HeaderArticleContent" ContentPlaceHolderID="HeaderArticleContent">
+<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="HeaderArticleContent">
 
 
     <!-- <script>

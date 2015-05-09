@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Swimmy
 {
-    public partial class SiteMaster : MasterPage
+    public partial class GlobalMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";

@@ -7,10 +7,10 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Swimmy.Account {
+namespace Swimmy {
     
     
-    public partial class Register {
+    public partial class Registrazione {
         
         /// <summary>
         /// Controllo form.

@@ -10,24 +10,24 @@
 namespace Swimmy {
     
     
-    public partial class SiteMaster {
+    public partial class ConfermaRegistrazione {
         
         /// <summary>
-        /// Controllo HeaderArticleContent.
+        /// Controllo form.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeaderArticleContent;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// Controllo ArticleContent.
+        /// Controllo redirectToIndex.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ArticleContent;
+        protected global::System.Web.UI.WebControls.Button redirectToIndex;
     }
 }

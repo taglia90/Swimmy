@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.Master.cs" Inherits="Swimmy.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Global.Master.cs" Inherits="Swimmy.GlobalMaster" %>
 
 
 
@@ -8,67 +8,29 @@
 <head runat="server">
     <title>Piscine in affitto su Swimmy</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Piscine in affitto su Swimmy" />
     <meta name="keywords" content="piscina piscine rilassarsi" />
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/skel.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/style-desktop.css" />
-    <link rel="stylesheet" href="./css/style-noscript.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="./css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 8]><script src="./css/ie/html5shiv.js"></script><![endif]-->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.dropotron.min.js"></script>
-    <script src="./js/jquery.scrolly.min.js"></script>
-    <script src="./js/jquery.onvisible.min.js"></script>
-    <script src="./js/skel.min.js"></script>
-    <script src="./js/skel-layers.min.js"></script>
-    <script src="./js/init.js"></script>
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-desktop.css" />
+    <link rel="stylesheet" href="css/style-noscript.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.onvisible.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
 
 </head>
 <body class="homepage">
 
-
-    <!--<header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    <a runat="server" href="~/">Inserire qui il logo</a>
-                </p>
-            </div>
-            <div class="float-right">
-                <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Esegui registrazione</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Accedi</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Disconnetti" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </section>
-                <nav>
-                    <ul id="menu">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">Informazioni</a></li>
-                        <li><a runat="server" href="~/Contact">Contatto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-   -->
-
     <!-- Header -->
     <div id="header">
 
-   
         <!-- Inner -->
         <div class="inner">
             <header>
@@ -111,13 +73,10 @@
 
     </div>
 
-
-
-
-
-    <div id="body">
+    <!-- Features -->
+    <div class="wrapper style1">
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
+        <section class="container special" id="features">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </section>
     </div>
