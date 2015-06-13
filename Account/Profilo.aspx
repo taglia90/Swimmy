@@ -1,30 +1,27 @@
-﻿<%@ Page Title="Profilo" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profilo.aspx.cs" Inherits="Swimmy.Account.Profilo" %>
-<%@ Page Title="Profilo" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profilo.aspx.cs" Inherits="Swimmy.Account.Profilo" %>
+﻿<%@ Page Title="Profilo" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="Profilo.aspx.cs" Inherits="Swimmy.Account.Profilo" %>
 
 
 
-<asp:Content runat="server" ID="MainContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="HeaderArticleContent" ContentPlaceHolderID="HeaderArticleContent">
 
     <!-- Main -->
-    <div class="wrapper style1">
+    <section>
+        <form id="form1" runat="server">
+            <h2><a href="#">Profilo</a></h2>
 
-        <div class="container">
-            <form id="form1" runat="server">
-                <h2><a href="#">Profilo</a></h2>
+            <div>
+                <p>Ciao!</p>
+                <asp:Label ID="userLabel" Text="No User" runat="server" />
+                <p>Grazie per esserti registrato. Il sito è ancora in costruzione, ma puoi già iniziare a inserire i tuoi annunci!</p>
+                <br />
+                <asp:Button ID="modificaProfiloButton" Text="Modifica profilo" runat="server" OnClick="modificaProfiloButton_Click" />
+                <asp:Button ID="inserisciAnnuncioButton" Text="Inserisci Annuncio" runat="server" OnClick="inserisciAnnuncioButton_Click" />
+                <asp:Button ID="logoutButton" Text="LogOut" runat="server" OnClick="logoutButton_Click" />
 
-                <div>
-                    <p>Ciao!</p>
-                    <asp:Label ID="userLabel" Text="No User" runat="server" />
-                    <p>Grazie per esserti registrato. Il sito è ancora in costruzione, ti invieremo una mail non appena sarà tutto pronto!</p>
-                    <br />
-                    <asp:Button ID="logoutButton" Text="LogOut" runat="server" OnClick="logoutButton_Click" />
+            </div>
+        </form>
 
-                </div>
-            </form>
-        </div>
-
-    </div>
-
+    </section>
 
 </asp:Content>
 

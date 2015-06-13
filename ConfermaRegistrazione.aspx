@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Registrazione avvenuta correttamente" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ConfermaRegistrazione.aspx.cs" Inherits="Swimmy.ConfermaRegistrazione" %>
+﻿<%@ Page Title="Registrazione avvenuta correttamente" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="ConfermaRegistrazione.aspx.cs" Inherits="Swimmy.ConfermaRegistrazione" %>
 
 
 

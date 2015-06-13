@@ -124,3 +124,4 @@ C:\Marco\siti internet\Swimmy\Swimmy\bin\it\Microsoft.AspNet.Membership.OpenAuth
 C:\Marco\siti internet\Swimmy\Swimmy\bin\it\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Marco\siti internet\Swimmy\Swimmy\obj\Debug\Swimmy.dll
 C:\Marco\siti internet\Swimmy\Swimmy\obj\Debug\Swimmy.pdb
+C:\Marco\siti internet\Swimmy\Swimmy\obj\Debug\Swimmy.csprojResolveAssemblyReference.cache

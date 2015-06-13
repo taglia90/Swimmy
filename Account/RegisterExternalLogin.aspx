@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Title="Registra account di accesso esterno" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterExternalLogin.aspx.cs" Inherits="Swimmy.Account.RegisterExternalLogin" %>
+﻿<%@ Page Language="C#" Title="Registra account di accesso esterno" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="RegisterExternalLogin.aspx.cs" Inherits="Swimmy.Account.RegisterExternalLogin" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <hgroup class="title">
         <h1>Esegui registrazione con account <%: ProviderDisplayName %> personale</h1>

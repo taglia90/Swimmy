@@ -7,10 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Swimmy.Account
 {
-    public partial class Profilo : System.Web.UI.Page
+    public partial class ModificaProfilo : System.Web.UI.Page
     {
         String nome;
         int idUtente;
+        DB.Utente dbU = new DB.Utente();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,29 +26,26 @@ namespace Swimmy.Account
             else
             {
                 userLabel.Text = nome;
+                emailLabel.Text = dbU.GetEmail(idUtente);
             }
         }
 
-        protected void modificaProfiloButton_Click(object sender, EventArgs e)
+
+
+        protected void submitButton_Click(object sender, EventArgs e)
         {
+            dbU.AggiornaUtente(idUtente, txtCitta.Text, txtCap.Text, txtNumeroTelefono.Text);
             Response.BufferOutput = true;
-            Response.Redirect("~/Account/ModificaProfilo.aspx", false);
+            Response.Redirect("~/Account/Profilo.aspx", false);
         }
 
-
-        protected void inserisciAnnuncioButton_Click(object sender, EventArgs e)
-        {
-            Response.BufferOutput = true;
-            Response.Redirect("~/Annuncio/InserisciAnnuncio.aspx", false);
-        }
-
-        protected void logoutButton_Click(object sender, EventArgs e)
+       /* protected void logoutButton_Click(object sender, EventArgs e)
         {
             Session["nomeCognome"] = null;
             Session["idUtente"] = null;
             Session.Abandon();
             Response.BufferOutput = true;
             Response.Redirect("~/Default.aspx", false);
-        }
+        }*/
     }
 }

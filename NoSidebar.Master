@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Site.Master.cs" Inherits="Swimmy.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/NoSidebar.Master.cs" Inherits="Swimmy.NoSidebarMaster" %>
 
 
 
@@ -49,7 +49,7 @@
         <!-- Inner -->
         <div class="inner">
             <header>
-                <h1><a href="Default.aspx" id="logo">Swimmy</a></h1>
+                <h1><a href="<%=Page.ResolveClientUrl("~/Default.aspx") %>" id="logo">Swimmy</a></h1>
             </header>
         </div>
 

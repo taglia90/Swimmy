@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Gestisci account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Manage.aspx.cs" Inherits="Swimmy.Account.Manage" %>
+﻿<%@ Page Title="Gestisci account" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="Manage.aspx.cs" Inherits="Swimmy.Account.Manage" %>
 <%--@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" --%>
 
 <asp:Content ContentPlaceHolderID="HeaderArticleContent" runat="server">

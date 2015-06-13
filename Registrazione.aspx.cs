@@ -57,8 +57,8 @@ namespace Swimmy
         {
             bool status = true;
             if (//InputValidation.ValidaNomeUtente(txtUsername.Text) == false
-                //|| InputValidation.ValidaPassword(txtPassword1.Text, txtPassword2.Text) == false
-                 InputValidation.ValidaNome(txtNome.Text) == false
+                 InputValidation.ValidaPassword(txtPassword1.Text, txtPassword2.Text) == false
+                || InputValidation.ValidaNome(txtNome.Text) == false
                 || InputValidation.ValidaNome(txtCognome.Text) == false
                 || InputValidation.ValidaEmail(txtEmail.Text) == false
                 //|| isUsernameUtilizzato()   //l'username è già usato da un altro utente.

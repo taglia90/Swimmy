@@ -7,54 +7,81 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Swimmy.Account {
+namespace Swimmy.Annuncio {
     
     
-    public partial class Profilo {
+    public partial class Annuncio {
         
         /// <summary>
-        /// Controllo form1.
+        /// Controllo form.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// Controllo userLabel.
+        /// Controllo titoloLabel.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userLabel;
+        protected global::System.Web.UI.WebControls.Label titoloLabel;
         
         /// <summary>
-        /// Controllo modificaProfiloButton.
+        /// Controllo descrizioneLabel.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button modificaProfiloButton;
+        protected global::System.Web.UI.WebControls.Label descrizioneLabel;
         
         /// <summary>
-        /// Controllo inserisciAnnuncioButton.
+        /// Controllo emailLabel.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button inserisciAnnuncioButton;
+        protected global::System.Web.UI.WebControls.Label emailLabel;
         
         /// <summary>
-        /// Controllo logoutButton.
+        /// Controllo cittaLabel.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutButton;
+        protected global::System.Web.UI.WebControls.Label cittaLabel;
+        
+        /// <summary>
+        /// Controllo indirizzoLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label indirizzoLabel;
+        
+        /// <summary>
+        /// Controllo telefonoLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label telefonoLabel;
+        
+        /// <summary>
+        /// Controllo submitButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitButton;
     }
 }

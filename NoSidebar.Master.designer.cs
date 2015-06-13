@@ -10,7 +10,7 @@
 namespace Swimmy {
     
     
-    public partial class SiteMaster {
+    public partial class NoSidebarMaster {
         
         /// <summary>
         /// Controllo HeaderArticleContent.

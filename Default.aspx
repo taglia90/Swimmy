@@ -21,7 +21,7 @@
                     <ul>
                         <li><a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Esegui registrazione</a></li>
                         <br />
-                       <!-- <li><a id="loginLink" runat="server" class="button" href="~/Login.aspx">Accedi</a></li>-->
+                        <li><a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a></li>
                     </ul>
                 </AnonymousTemplate>
                 <LoggedInTemplate>

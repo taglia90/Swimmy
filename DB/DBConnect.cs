@@ -80,9 +80,9 @@ namespace Swimmy.DB
         }
 
         //Insert statement
-        public void Insert(String username)
+      /*  public void Insert(String username)
         {
-            string query = "INSERT INTO swimmy.utente (username, passwordm, nome, cognome) VALUES('"+username+"', 'asdasd','Marco', 'Taglia')";
+            string query = "INSERT INTO swimmy.utente (username, passwordm, nome, cognome) VALUES('" + username + "', 'asdasd','Marco', 'Taglia')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -96,15 +96,11 @@ namespace Swimmy.DB
                 //close connection
                 this.CloseConnection();
             }
-        }
+        }*/
 
-        public void ciao()
-        {
-            Insert("asd");
-        }
 
         //Update statement
-        public void Update()
+       /* public void Update()
         {
             string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
 
@@ -124,10 +120,10 @@ namespace Swimmy.DB
                 //close connection
                 this.CloseConnection();
             }
-        }
+        }*/
 
         //Delete statement
-        public void Delete()
+        /*public void Delete()
         {
             string query = "DELETE FROM tableinfo WHERE name='John Smith'";
 
@@ -137,10 +133,10 @@ namespace Swimmy.DB
                 cmd.ExecuteNonQuery();
                 this.CloseConnection();
             }
-        }
+        }*/
 
         //Select statement
-        public List<string>[] Select()
+        /*public List<string>[] Select()
         {
             string query = "SELECT * FROM tableinfo";
 
@@ -179,11 +175,105 @@ namespace Swimmy.DB
             {
                 return list;
             }
+        }*/
+
+        public string GetEmail(String nomeUtente)
+        {
+            string query = "SELECT email FROM utente WHERE username=?uname";
+            string email = "";
+
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("?uname", nomeUtente);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        email = dataReader.GetString(0);
+                    }
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+            }
+            else
+            {
+                //ERRORE DEL DATABASE
+            }
+            return email;
         }
 
 
+        public int GetIdUtente(String nomeUtente)
+        {
+            string query = "SELECT idUtente FROM utente WHERE username=?uname";
+            int idUtente = -1;
+
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("?uname", nomeUtente);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    idUtente = dataReader.GetInt32(0);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+            }
+            else
+            {
+                //ERRORE DEL DATABASE
+            }
+            return idUtente;
+        }
+
+        public void AggiornaUtente(int idUtente, string titolo, string descrizione)
+        {
+            string query = "UPDATE swimmy.utente SET name='Joe', age='22' WHERE idUtente='?idUtente'";
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("?idUtente", idUtente);
+                //Assign the query using CommandText
+                //cmd.CommandText = query;
+                //Assign the connection using Connection
+                //cmd.Connection = connection;
+
+                //Execute query
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
         //Count statement
-        public int Count()
+       /* public int Count()
         {
             string query = "SELECT Count(*) FROM tableinfo";
             int Count = -1;
@@ -206,10 +296,10 @@ namespace Swimmy.DB
             {
                 return Count;
             }
-        }
+        }*/
 
         //Backup
-        public void Backup()
+        /*public void Backup()
         {
             try
             {
@@ -250,10 +340,10 @@ namespace Swimmy.DB
             {
                 MessageBox.Show("Error , unable to backup!");
             }
-        }
+        }*/
 
         //Restore
-        public void Restore()
+        /*public void Restore()
         {
             try
             {
@@ -283,6 +373,6 @@ namespace Swimmy.DB
             {
                 MessageBox.Show("Error , unable to Restore!");
             }
-        }
+        }*/
     }
 }

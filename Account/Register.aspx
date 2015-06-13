@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Swimmy.Account.Register" %>
+﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Swimmy.Account.Register" %>
 
 
 
