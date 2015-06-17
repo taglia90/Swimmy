@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Account\Ricerca.aspx" />
     <Content Include="Annuncio\InserisciAnnuncio.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
@@ -229,6 +230,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Ricerca.aspx.cs">
+      <DependentUpon>Ricerca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Ricerca.aspx.designer.cs">
+      <DependentUpon>Ricerca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Annuncio\InserisciAnnuncio.aspx.cs">
       <DependentUpon>InserisciAnnuncio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

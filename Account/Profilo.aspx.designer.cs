@@ -49,6 +49,15 @@ namespace Swimmy.Account {
         protected global::System.Web.UI.WebControls.Button inserisciAnnuncioButton;
         
         /// <summary>
+        /// Controllo ricarcaButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ricarcaButton;
+        
+        /// <summary>
         /// Controllo logoutButton.
         /// </summary>
         /// <remarks>

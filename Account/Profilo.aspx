@@ -16,6 +16,7 @@
                 <br />
                 <asp:Button ID="modificaProfiloButton" Text="Modifica profilo" runat="server" OnClick="modificaProfiloButton_Click" />
                 <asp:Button ID="inserisciAnnuncioButton" Text="Inserisci Annuncio" runat="server" OnClick="inserisciAnnuncioButton_Click" />
+                <asp:Button ID="ricarcaButton" Text="Effettua una ricera" runat="server" OnClick="ricercaButton_Click" />
                 <asp:Button ID="logoutButton" Text="LogOut" runat="server" OnClick="logoutButton_Click" />
 
             </div>

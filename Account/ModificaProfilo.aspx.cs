@@ -27,6 +27,10 @@ namespace Swimmy.Account
             {
                 userLabel.Text = nome;
                 emailLabel.Text = dbU.GetEmail(idUtente);
+                DB.Utente utente = dbU.GetUtente(idUtente);
+                txtCitta.Text = utente.Citta;
+                txtCap.Text = utente.Cap;
+                txtNumeroTelefono.Text = utente.Telefono;
             }
         }
 
@@ -39,13 +43,13 @@ namespace Swimmy.Account
             Response.Redirect("~/Account/Profilo.aspx", false);
         }
 
-       /* protected void logoutButton_Click(object sender, EventArgs e)
-        {
-            Session["nomeCognome"] = null;
-            Session["idUtente"] = null;
-            Session.Abandon();
-            Response.BufferOutput = true;
-            Response.Redirect("~/Default.aspx", false);
-        }*/
+        /* protected void logoutButton_Click(object sender, EventArgs e)
+         {
+             Session["nomeCognome"] = null;
+             Session["idUtente"] = null;
+             Session.Abandon();
+             Response.BufferOutput = true;
+             Response.Redirect("~/Default.aspx", false);
+         }*/
     }
 }

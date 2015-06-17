@@ -10,7 +10,7 @@
 namespace Swimmy.Account {
     
     
-    public partial class InserisciAnnuncio {
+    public partial class Ricerca {
         
         /// <summary>
         /// Controllo form.
@@ -22,58 +22,40 @@ namespace Swimmy.Account {
         protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// Controllo txtTitolo.
+        /// Controllo TextBox1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitolo;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// Controllo txtTitoloExprValidator.
+        /// Controllo RegularExpressionValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtTitoloExprValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
-        /// Controllo txtDescrizione.
+        /// Controllo txtProvincia.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescrizione;
+        protected global::System.Web.UI.WebControls.TextBox txtProvincia;
         
         /// <summary>
-        /// Controllo txtDescrizioneExprValidator.
+        /// Controllo txtProvinciaExprValidator.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtDescrizioneExprValidator;
-        
-        /// <summary>
-        /// Controllo regioneDDL.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList regioneDDL;
-        
-        /// <summary>
-        /// Controllo provinciaDDL.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList provinciaDDL;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtProvinciaExprValidator;
         
         /// <summary>
         /// Controllo txtCitta.
@@ -92,42 +74,6 @@ namespace Swimmy.Account {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator txtCittaExprValidator;
-        
-        /// <summary>
-        /// Controllo txtIndirizzo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIndirizzo;
-        
-        /// <summary>
-        /// Controllo txtIndirizzoExprValidator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtIndirizzoExprValidator;
-        
-        /// <summary>
-        /// Controllo txtTelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
-        
-        /// <summary>
-        /// Controllo txtTelefonoExprValidator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtTelefonoExprValidator;
         
         /// <summary>
         /// Controllo submitButton.
