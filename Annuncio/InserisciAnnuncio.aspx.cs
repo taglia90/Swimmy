@@ -15,8 +15,8 @@ namespace Swimmy.Account
         private string nome;
         private int idUtente;
         private DB.Annuncio dbAnnuncio = new DB.Annuncio();
-        private string fromRootToPhotos = @"C:\SwimmyUpload\Photos\";
-        private string fotoPath = @"C:/SwimmyUpload/Photos/";
+        private string fromRootToPhotos = @"../../App_Data/Photos/";
+        private string partialPath = @"http://www.swimmy.it/App_Data/Photos/";
         private List<string> listaFotoDaSalvare;
 
 
@@ -75,18 +75,21 @@ namespace Swimmy.Account
                 {
                     if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)//=5Mb
                     {
-                        string photoFolder = Path.Combine(fromRootToPhotos, idUtente.ToString());//Path.Combine(fromRootToPhotos, User.Identity.Name);
+                       // string photoFolder = Path.Combine(fromRootToPhotos, idUtente.ToString());//Path.Combine(fromRootToPhotos, User.Identity.Name);
 
-                        if (!Directory.Exists(photoFolder))
-                            Directory.CreateDirectory(photoFolder);
+                        //if (!Directory.Exists(photoFolder))
+                          //  Directory.CreateDirectory(photoFolder);
 
                         string extension = Path.GetExtension(fuUpload.FileName);
                         string uniqueFileName = Path.ChangeExtension(fuUpload.FileName, DateTime.Now.Ticks.ToString());
+                        string path;
+                        string serverPath = Server.MapPath(".") + "//App_Data//" + uniqueFileName + extension;
+                        fuUpload.SaveAs(serverPath);
+                        path = "..//..//App_Data//" + uniqueFileName + extension;
 
-                        fuUpload.SaveAs(Path.Combine(photoFolder, uniqueFileName + extension));
-                        listaFotoDaSalvare.Add(Path.Combine(photoFolder, uniqueFileName + extension));
+                        listaFotoDaSalvare.Add(path);//Path.Combine(partialPath + idUtente.ToString(), uniqueFileName + extension));
                         (Session["listaFoto"]) = listaFotoDaSalvare;
-                        DisplayUploadedPhotos(photoFolder);
+                        DisplayUploadedPhotos();
 
                         lblStatus.Text = "<font color='Green'>" + fuUpload.FileName + " caricata correttamente</font>";
                     }
@@ -100,18 +103,18 @@ namespace Swimmy.Account
                 lblStatus.Text = "Nessuna foto selezionata.";
         }
 
-        public void DisplayUploadedPhotos(string folder)
+        public void DisplayUploadedPhotos()
         {
             //string[] allPhotoFiles = Directory.GetFiles(folder);
             IList<string> allPhotoPaths = new List<string>();
-            //string fileName;
+            string fileName;
 
             //foreach (string f in allPhotoFiles)
             foreach (string f in listaFotoDaSalvare)
             {
-                //fileName = Path.GetFileName(f);
+                fileName = Path.GetFileName(f);
                 //allPhotoPaths.Add("Photos/" + User.Identity.Name + "/" + fileName);
-                allPhotoPaths.Add("http://viga.rmsi.it/tesi/1147-07-04-22.png");//(fromRootToPhotos + idUtente.ToString() + "/" + fileName);
+                allPhotoPaths.Add(partialPath + idUtente.ToString() + "/" + fileName);
             }
 
             rptrUserPhotos.DataSource = allPhotoPaths;
@@ -171,8 +174,10 @@ namespace Swimmy.Account
                 if (cb.Checked)
                 {
                     string fromPhotosToExtension = cb.Attributes["special"];
-                    string fromRootToHome = @"C:\SwimmyUpload\";
-                    string fileToDelete = Path.Combine(fromRootToHome, fromPhotosToExtension);
+                    string fromRootToHome = "..//..//App_Data//";
+                    listaFotoDaSalvare.Remove(fromPhotosToExtension);
+                    (Session["listaFoto"]) = listaFotoDaSalvare;
+                    string fileToDelete = Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
                     File.Delete(fileToDelete);
 
                     lblStatus.Text = "<font color='Green'>Foto eliminata/e correttamente.</font>";
@@ -184,7 +189,7 @@ namespace Swimmy.Account
                 lblStatus.Text = "Seleziona una foto per cancellarla.";
 
             //DisplayUploadedPhotos(Path.Combine(fromRootToPhotos, User.Identity.Name));
-            DisplayUploadedPhotos(Path.Combine(fromRootToPhotos, idUtente.ToString()));
+            DisplayUploadedPhotos();
         }
     }
 }

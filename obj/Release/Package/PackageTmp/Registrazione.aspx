@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Swimmy.Account.Register" %>
+﻿<%@ Page Title="Registrazione" Language="C#" MasterPageFile="~/NoSidebar.Master" AutoEventWireup="true" CodeBehind="Registrazione.aspx.cs" Inherits="Swimmy.Registrazione" %>
 
 
 
-<asp:Content runat="server" ID="HeaderArticleContent" ContentPlaceHolderID="HeaderArticleContent">
+<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="HeaderArticleContent">
 
 
     <!-- <script>
@@ -56,6 +56,7 @@
                     ValidationExpression="^([a-zA-Z0-9])+$" ForeColor="Red" />
                 <asp:CustomValidator runat="server" ControlToValidate="txtUsername" ErrorMessage="L'username è già utilizzato."
                     OnServerValidate="controllaUsername" ForeColor="Red" />
+                -->
 
                 <label>Password (minimo 6 caratteri)</label>
                 <asp:TextBox ID="txtPassword1" Text="Password" TextMode="Password" runat="server" />
@@ -72,7 +73,7 @@
                     runat="server" />
                 <asp:CompareValidator runat="server" ControlToValidate="txtPassword2" ControlToCompare="txtPassword1"
                     ErrorMessage="Le password inserite non sono uguali!" ForeColor="Red" />
-                -->
+                
 
 
             <label>Email</label>

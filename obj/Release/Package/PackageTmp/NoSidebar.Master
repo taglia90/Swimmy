@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Global.Master.cs" Inherits="Swimmy.GlobalMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/NoSidebar.Master.cs" Inherits="Swimmy.NoSidebarMaster" %>
 
 
 
@@ -8,8 +8,8 @@
 <head runat="server">
     <title>Piscine in affitto su Swimmy</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Piscine in affitto su Swimmy" />
-    <meta name="keywords" content="piscina piscine rilassarsi" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/skel.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -24,9 +24,24 @@
     <script src="<%= Page.ResolveClientUrl("~/js/skel.min.js")%>"></script>
     <script src="<%= Page.ResolveClientUrl("~/js/skel-layers.min.js")%>"></script>
     <script src="<%= Page.ResolveClientUrl("~/js/init.js")%>"></script>
+    <asp:ContentPlaceHolder runat="server" ID="ScriptPlaceHolder" />
+
+    <!--  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-61929539-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>-->
 
 </head>
-<body class="homepage">
+<body class="no-sidebar">
+
 
     <!-- Header -->
     <div id="header">
@@ -34,52 +49,54 @@
         <!-- Inner -->
         <div class="inner">
             <header>
-                <h1><a href="Default.aspx" id="logo">Swimmy</a></h1>
-                <hr />
-                <p>Piscine in affitto su Swimmy</p>
+                <h1><a href="<%=Page.ResolveClientUrl("~/Default.aspx") %>" id="logo">Swimmy</a></h1>
             </header>
-            <footer>
-                <a href="#features" class="button circled scrolly">Start</a>
-            </footer>
         </div>
 
         <!-- Nav -->
         <!--<nav id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li><a href="#">Etiam dolore nisl</a></li>
-                        <li>
-                            <a href="">And a submenu &hellip;</a>
-                            <ul>
-                                <li><a href="#">Lorem ipsum dolor</a></li>
-                                <li><a href="#">Phasellus consequat</a></li>
-                                <li><a href="#">Magna phasellus</a></li>
-                                <li><a href="#">Etiam dolore nisl</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Veroeros feugiat</a></li>
-                    </ul>
-                </li>
-                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                <li><a href="no-sidebar.html">No Sidebar</a></li>
-            </ul>
-        </nav>-->
+						<ul>
+							<li><a href="Default.aspx">Home</a></li>
+							<li>
+								<a href="">Dropdown</a>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam dolore nisl</a></li>
+									<li>
+										<a href="">And a submenu &hellip;</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Phasellus consequat</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Veroeros feugiat</a></li>
+								</ul>
+							</li>
+							<li><a href="left-sidebar.html">Left Sidebar</a></li>
+							<li><a href="right-sidebar.html">Right Sidebar</a></li>
+							<li><a href="no-sidebar.html">No Sidebar</a></li>
+						</ul>
+					</nav>-->
 
     </div>
 
-    <!-- Features -->
+
+    <!-- Main -->
     <div class="wrapper style1">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="container special" id="features">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
+        <div class="container">
+            <article id="main" class="special">
+                <asp:ContentPlaceHolder runat="server" ID="HeaderArticleContent" />
+            </article>
+            <hr />
+            <div class="row">
+                <asp:ContentPlaceHolder runat="server" ID="ArticleContent" />
+            </div>
+        </div>
     </div>
+
 
 
     <!-- Footer -->

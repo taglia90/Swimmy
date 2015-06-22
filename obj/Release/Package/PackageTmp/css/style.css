@@ -1,4 +1,4 @@
-﻿@charset 'UTF-8';
+@charset 'UTF-8';
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600');
 @import url('font-awesome.min.css');
 
@@ -689,7 +689,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../Images/header.jpg');
+		background-image: url('../images/header.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -801,7 +801,7 @@
 
 	#nav
 	{
-		position: absolute;    /*position: fixed;*/
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -809,9 +809,6 @@
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
-        /*background:transparent rgb(0,200,255);
-        transition: 0.8s ease-in-out 0s;*/
-        
 	}
 	
 		#nav > ul

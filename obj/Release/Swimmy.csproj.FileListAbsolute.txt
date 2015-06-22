@@ -41,3 +41,46 @@ C:\Progetto Swimmy\Swimmy\bin\it\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Progetto Swimmy\Swimmy\obj\Release\Swimmy.dll
 C:\Progetto Swimmy\Swimmy\obj\Release\Swimmy.pdb
 C:\Progetto Swimmy\Swimmy\obj\Release\Swimmy.csprojResolveAssemblyReference.cache
+C:\Swimmy\Swimmy\bin\Swimmy.dll.config
+C:\Swimmy\Swimmy\bin\Swimmy.dll
+C:\Swimmy\Swimmy\bin\Swimmy.pdb
+C:\Swimmy\Swimmy\bin\AspNet.ScriptManager.jQuery.dll
+C:\Swimmy\Swimmy\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.AspNet.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.Core.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OAuth.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OpenId.dll
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Swimmy\Swimmy\bin\EntityFramework.dll
+C:\Swimmy\Swimmy\bin\EntityFramework.SqlServer.dll
+C:\Swimmy\Swimmy\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Swimmy\Swimmy\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Swimmy\Swimmy\bin\Microsoft.Web.Infrastructure.dll
+C:\Swimmy\Swimmy\bin\MySql.Data.Entity.EF5.dll
+C:\Swimmy\Swimmy\bin\MySql.Data.Entity.EF6.dll
+C:\Swimmy\Swimmy\bin\MySql.Fabric.Plugin.dll
+C:\Swimmy\Swimmy\bin\System.Web.Providers.dll
+C:\Swimmy\Swimmy\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Swimmy\Swimmy\bin\Mono.Math.dll
+C:\Swimmy\Swimmy\bin\Microsoft.Web.Infrastructure.xml
+C:\Swimmy\Swimmy\bin\EntityFramework.xml
+C:\Swimmy\Swimmy\bin\EntityFramework.SqlServer.xml
+C:\Swimmy\Swimmy\bin\System.Web.Providers.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.Core.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OAuth.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OpenId.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Swimmy\Swimmy\bin\DotNetOpenAuth.AspNet.xml
+C:\Swimmy\Swimmy\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Swimmy\Swimmy\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Swimmy\Swimmy\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Swimmy\Swimmy\bin\Mono.Math.xml
+C:\Swimmy\Swimmy\bin\it\EntityFramework.resources.dll
+C:\Swimmy\Swimmy\bin\it\EntityFramework.SqlServer.resources.dll
+C:\Swimmy\Swimmy\bin\it\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\Swimmy\Swimmy\bin\it\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Swimmy\Swimmy\obj\Release\Swimmy.csprojResolveAssemblyReference.cache
+C:\Swimmy\Swimmy\obj\Release\Swimmy.dll
+C:\Swimmy\Swimmy\obj\Release\Swimmy.pdb
