@@ -16,7 +16,7 @@ namespace Swimmy.Account
         private int idUtente;
         private DB.Annuncio dbAnnuncio = new DB.Annuncio();
         private string fromRootToPhotos = @"../../App_Data/Photos/";
-        private string partialPath = @"http://www.swimmy.it/App_Data/Photos/";
+        private string partialPath = @"http://www.swimmy.it/App_Data/";
         private List<string> listaFotoDaSalvare;
 
 
@@ -68,36 +68,47 @@ namespace Swimmy.Account
         {
             if (fuUpload.HasFile)
             {
-                if ((fuUpload.PostedFile.ContentType == "image/jpeg") ||
-                    (fuUpload.PostedFile.ContentType == "image/png") ||
-                    (fuUpload.PostedFile.ContentType == "image/bmp") ||
-                    (fuUpload.PostedFile.ContentType == "image/gif"))
+                try
                 {
-                    if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)//=5Mb
+                    if ((fuUpload.PostedFile.ContentType == "image/jpeg") ||
+                        (fuUpload.PostedFile.ContentType == "image/png") ||
+                        (fuUpload.PostedFile.ContentType == "image/bmp") ||
+                        (fuUpload.PostedFile.ContentType == "image/gif"))
                     {
-                       // string photoFolder = Path.Combine(fromRootToPhotos, idUtente.ToString());//Path.Combine(fromRootToPhotos, User.Identity.Name);
+                        if (Convert.ToInt64(fuUpload.PostedFile.ContentLength) < 5000000)//=5Mb
+                        {
+                            // string photoFolder = Path.Combine(fromRootToPhotos, idUtente.ToString());//Path.Combine(fromRootToPhotos, User.Identity.Name);
 
-                        //if (!Directory.Exists(photoFolder))
-                          //  Directory.CreateDirectory(photoFolder);
+                            //if (!Directory.Exists(photoFolder))
+                            //  Directory.CreateDirectory(photoFolder);
 
-                        string extension = Path.GetExtension(fuUpload.FileName);
-                        string uniqueFileName = Path.ChangeExtension(fuUpload.FileName, DateTime.Now.Ticks.ToString());
-                        string path;
-                        string serverPath = Server.MapPath(".") + "//App_Data//" + uniqueFileName + extension;
-                        fuUpload.SaveAs(serverPath);
-                        path = "..//..//App_Data//" + uniqueFileName + extension;
+                            string extension = Path.GetExtension(fuUpload.FileName);
+                            string uniqueFileName = Path.ChangeExtension(fuUpload.FileName, DateTime.Now.Ticks.ToString());
 
-                        listaFotoDaSalvare.Add(path);//Path.Combine(partialPath + idUtente.ToString(), uniqueFileName + extension));
-                        (Session["listaFoto"]) = listaFotoDaSalvare;
-                        DisplayUploadedPhotos();
+                            string serverPath = Server.MapPath("~/") + "App_Data//" + uniqueFileName + extension;
+                            fuUpload.SaveAs(serverPath);
 
-                        lblStatus.Text = "<font color='Green'>" + fuUpload.FileName + " caricata correttamente</font>";
+
+
+                            string path;
+                            path = "App_Data//" + uniqueFileName + extension;
+
+                            listaFotoDaSalvare.Add(path);//Path.Combine(partialPath + idUtente.ToString(), uniqueFileName + extension));
+                            (Session["listaFoto"]) = listaFotoDaSalvare;
+                            DisplayUploadedPhotos();
+
+                            lblStatus.Text = "<font color='Green'>" + fuUpload.FileName + " caricata correttamente</font>";
+                        }
+                        else
+                            lblStatus.Text = "Dimensione massima: 5MB.";
                     }
                     else
-                        lblStatus.Text = "Dimensione massima: 5MB.";
+                        lblStatus.Text = "Le foto devono essere jpeg, jpg, png, bmp, o gif.";
                 }
-                else
-                    lblStatus.Text = "Le foto devono essere jpeg, jpg, png, bmp, o gif.";
+                catch (Exception ex)
+                {
+                    lblStatus.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
+                }
             }
             else
                 lblStatus.Text = "Nessuna foto selezionata.";
@@ -114,7 +125,7 @@ namespace Swimmy.Account
             {
                 fileName = Path.GetFileName(f);
                 //allPhotoPaths.Add("Photos/" + User.Identity.Name + "/" + fileName);
-                allPhotoPaths.Add(partialPath + idUtente.ToString() + "/" + fileName);
+                allPhotoPaths.Add(Path.Combine(Server.MapPath("~/") + "App_Data", fileName));
             }
 
             rptrUserPhotos.DataSource = allPhotoPaths;
@@ -174,10 +185,11 @@ namespace Swimmy.Account
                 if (cb.Checked)
                 {
                     string fromPhotosToExtension = cb.Attributes["special"];
-                    string fromRootToHome = "..//..//App_Data//";
+                    string fileName = Path.GetFileName(fromPhotosToExtension);
+                    //string fromRootToHome = "..//..//App_Data//";
                     listaFotoDaSalvare.Remove(fromPhotosToExtension);
                     (Session["listaFoto"]) = listaFotoDaSalvare;
-                    string fileToDelete = Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
+                    string fileToDelete = Server.MapPath("~/") + "App_Data//" + fileName; //Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
                     File.Delete(fileToDelete);
 
                     lblStatus.Text = "<font color='Green'>Foto eliminata/e correttamente.</font>";
