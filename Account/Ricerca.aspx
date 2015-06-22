@@ -40,7 +40,7 @@
 
 
             <label>Provincia</label>
-            <asp:DropDownList ID="provinciaDDL" runat="server" Width="200px" OnSelectedIndexChanged="submitButton_Click">
+            <asp:DropDownList ID="provinciaDDL" runat="server" Width="200px" AutoPostBack="true" OnSelectedIndexChanged="submitButton_Click">
             </asp:DropDownList>
             <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="provinciaDDL"
                 runat="server" />
@@ -59,10 +59,11 @@
             <asp:Button ID="submitButton" Text="Cerca" CssClass="button" runat="server" OnClick="submitButton_Click" />
         </form>
 
-        
-            <asp:ListView ID="listaAnnunciView" runat="server" 
-                DataKeyNames="idAnnuncio" GroupItemCount="4"
-                ItemType="DB.Annuncio" SelectMethod="GetAnnunci">
+          <!--DataKeyNames="idAnnuncio" GroupItemCount="4"
+                ItemType="DB.Annuncio" SelectMethod="GetAnnunci"-->
+            <asp:ListView ID="listaAnnunciView" runat="server" >
+              
+                
                 <EmptyDataTemplate>
                     <table >
                         <tr>
@@ -71,7 +72,7 @@
                     </table>
                 </EmptyDataTemplate>
                 <EmptyItemTemplate>
-                    <td/>
+                    <td><td/>
                 </EmptyItemTemplate>
                 <GroupTemplate>
                     <tr id="itemPlaceholderContainer" runat="server">
@@ -83,16 +84,16 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Item.IdAnnuncio%>">
-                                       <!-- <img src="/Catalog/Images/Thumbs/<#:Item.ImagePath%>"
-                                            width="100" height="75" style="border: solid" /></a>-->
+                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
+                                        <img src="<%#Eval("UrlFotoPrincipale")%>"
+                                            width="100" height="75" style="border: solid" /></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#(string)Eval("titolo")%>">
+                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
                                         <span>
-                                            <%#(string)Eval("titolo")%>
+                                            <%#Eval("Titolo")%><!--(string)Eval("titolo")-->
                                         </span>
                                     </a>
                                     <br />

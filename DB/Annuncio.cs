@@ -19,6 +19,8 @@ namespace Swimmy.DB
         private string citta;
         private string indirizzo;
         private string telefono;
+        private string urlFotoPrincipale;
+
 
 
         MySql.Data.MySqlClient.MySqlConnection conn;
@@ -215,7 +217,12 @@ namespace Swimmy.DB
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
-            queryStr = "SELECT * FROM swimmy.annuncio WHERE provincia=?pro AND regione LIKE ?reg AND citta LIKE ?cit;";
+            //queryStr = "SELECT * FROM swimmy.annuncio WHERE regione=?reg AND provincia LIKE ?pro AND citta LIKE ?cit;";
+
+            queryStr = "SELECT a.*, f.urlFoto FROM swimmy.annuncio a LEFT JOIN swimmy.foto f" +
+" ON a.idAnnuncio = f.idAnnuncio" +
+" WHERE regione=?reg AND provincia LIKE ?pro AND citta LIKE ?cit" +
+" GROUP BY a.idAnnuncio;";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
 
@@ -241,6 +248,52 @@ namespace Swimmy.DB
                     annuncio.Citta = reader["citta"].ToString();
                     annuncio.Indirizzo = reader["indirizzo"].ToString();
                     annuncio.Telefono = reader["telefono"].ToString();
+                    annuncio.UrlFotoPrincipale = reader["urlFoto"].ToString();
+
+                    listaAnnunci.Add(annuncio);
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return listaAnnunci;
+        }
+
+        public List<Annuncio> getListaAnnunciDiUtente(int idUtente)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+
+            queryStr = "SELECT a.*, f.urlFoto FROM swimmy.annuncio a LEFT JOIN swimmy.foto f" +
+" ON a.idAnnuncio = f.idAnnuncio" +
+" WHERE a.idUtente=?idu" +
+" GROUP BY a.idAnnuncio;";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.Parameters.AddWithValue("?idu", idUtente);
+
+            reader = cmd.ExecuteReader();
+
+            List<Annuncio> listaAnnunci = new List<Annuncio>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    var annuncio = new Annuncio();
+                    annuncio.IdAnnuncio = Convert.ToInt32(reader["idAnnuncio"]);
+                    annuncio.IdUtente = Convert.ToInt32(reader["idUtente"]);
+                    annuncio.Titolo = reader["titolo"].ToString();
+                    annuncio.Descrizione = reader["descrizione"].ToString();
+                    annuncio.Regione = reader["regione"].ToString();
+                    annuncio.Provincia = reader["provincia"].ToString();
+                    annuncio.Citta = reader["citta"].ToString();
+                    annuncio.Indirizzo = reader["indirizzo"].ToString();
+                    annuncio.Telefono = reader["telefono"].ToString();
+                    annuncio.UrlFotoPrincipale = reader["urlFoto"].ToString();
 
                     listaAnnunci.Add(annuncio);
                 }
@@ -312,6 +365,13 @@ namespace Swimmy.DB
             get { return telefono; }
             set { telefono = value; }
         }
+
+        public string UrlFotoPrincipale
+        {
+            get { return urlFotoPrincipale; }
+            set { urlFotoPrincipale = value; }
+        }
+
 
         #endregion
     }

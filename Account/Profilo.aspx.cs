@@ -41,6 +41,13 @@ namespace Swimmy.Account
             Response.Redirect("~/Annuncio/InserisciAnnuncio.aspx", false);
         }
 
+
+        protected void listaAnnunciButton_Click(object sender, EventArgs e)
+        {
+            Response.BufferOutput = true;
+            Response.Redirect("~/Annuncio/ListaAnnunci.aspx", false);
+        }
+
         protected void ricercaButton_Click(object sender, EventArgs e)
         {
             Response.BufferOutput = true;

@@ -42,7 +42,7 @@
             });
 
         });
-  </script>
+    </script>
 
 </asp:Content>
 
@@ -93,7 +93,7 @@
                                 <img src="<%# Container.DataItem %>" alt="" /></li>
                         </ItemTemplate>
                     </asp:Repeater>
-                   <!-- <li>
+                    <!-- <li>
                         <img src="../images/pic07.jpg" alt=""></li>
                     <li>
                         <img src="../images/pic08.jpg" alt=""></li>
@@ -106,8 +106,18 @@
             <br />
             <br />
 
-
+            <%if (isLoggato)
+              { %>
             <asp:Button ID="submitButton" Text="Torna al tuo profilo" CssClass="button" runat="server" OnClick="submitButton_Click" />
+            <%}
+              else
+              { %>
+            <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Esegui registrazione</a>
+            <br />
+            <br />
+            <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a>
+
+            <%} %>
         </form>
     </section>
 

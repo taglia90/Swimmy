@@ -12,7 +12,7 @@ namespace Swimmy.Account
     {
         private String nome;
         private int idUtente = 0;
-        DB.Annuncio dba = new DB.Annuncio();
+        private DB.Annuncio dba = new DB.Annuncio();
         protected List<DB.Annuncio> listaAnnunci = new List<DB.Annuncio>();
 
         protected void Page_Load(object sender, EventArgs e)

@@ -13,10 +13,13 @@
                 <p>Ciao!</p>
                 <asp:Label ID="userLabel" Text="No User" runat="server" />
                 <p>Grazie per esserti registrato. Il sito è ancora in costruzione, ma puoi già iniziare a inserire i tuoi annunci!</p>
-                <br />
+                <br /><br />
                 <asp:Button ID="modificaProfiloButton" Text="Modifica profilo" runat="server" OnClick="modificaProfiloButton_Click" />
-                <asp:Button ID="inserisciAnnuncioButton" Text="Inserisci Annuncio" runat="server" OnClick="inserisciAnnuncioButton_Click" />
                 <asp:Button ID="ricarcaButton" Text="Effettua una ricera" runat="server" OnClick="ricercaButton_Click" />
+                <br /><br />
+                <asp:Button ID="inserisciAnnuncioButton" Text="Inserisci Annuncio" runat="server" OnClick="inserisciAnnuncioButton_Click" />
+                <asp:Button ID="listaAnnunciButton" Text="I tuoi annunci" runat="server" OnClick="listaAnnunciButton_Click" />
+                <br /><br />
                 <asp:Button ID="logoutButton" Text="LogOut" runat="server" OnClick="logoutButton_Click" />
 
             </div>
