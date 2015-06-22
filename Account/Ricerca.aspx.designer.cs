@@ -22,40 +22,22 @@ namespace Swimmy.Account {
         protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// Controllo TextBox1.
+        /// Controllo regioneDDL.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList regioneDDL;
         
         /// <summary>
-        /// Controllo RegularExpressionValidator1.
+        /// Controllo provinciaDDL.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
-        /// <summary>
-        /// Controllo txtProvincia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProvincia;
-        
-        /// <summary>
-        /// Controllo txtProvinciaExprValidator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator txtProvinciaExprValidator;
+        protected global::System.Web.UI.WebControls.DropDownList provinciaDDL;
         
         /// <summary>
         /// Controllo txtCitta.
@@ -83,5 +65,14 @@ namespace Swimmy.Account {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitButton;
+        
+        /// <summary>
+        /// Controllo listaAnnunciView.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView listaAnnunciView;
     }
 }

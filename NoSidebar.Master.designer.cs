@@ -13,6 +13,15 @@ namespace Swimmy {
     public partial class NoSidebarMaster {
         
         /// <summary>
+        /// Controllo ScriptPlaceHolder.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptPlaceHolder;
+        
+        /// <summary>
         /// Controllo HeaderArticleContent.
         /// </summary>
         /// <remarks>

@@ -24,7 +24,7 @@
     <script src="<%= Page.ResolveClientUrl("~/js/skel.min.js")%>"></script>
     <script src="<%= Page.ResolveClientUrl("~/js/skel-layers.min.js")%>"></script>
     <script src="<%= Page.ResolveClientUrl("~/js/init.js")%>"></script>
-
+    <asp:ContentPlaceHolder runat="server" ID="ScriptPlaceHolder" />
 
     <!--  <script>
         (function (i, s, o, g, r, a, m) {

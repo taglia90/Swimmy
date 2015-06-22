@@ -176,6 +176,10 @@
     <Content Include="css\style-wide.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="ImageSlider\css\responsiveslides.css" />
+    <Content Include="ImageSlider\css\themes.css" />
+    <Content Include="ImageSlider\js\responsiveslides.js" />
+    <Content Include="ImageSlider\js\responsiveslides.min.js" />
     <Content Include="Registrazione.aspx" />
     <Content Include="images\bullet.png" />
     <Content Include="images\header.jpg" />

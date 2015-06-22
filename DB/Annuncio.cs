@@ -14,6 +14,8 @@ namespace Swimmy.DB
         private int idUtente;
         private string titolo;
         private string descrizione;
+        private string regione;
+        private string provincia;
         private string citta;
         private string indirizzo;
         private string telefono;
@@ -30,12 +32,12 @@ namespace Swimmy.DB
 
         }
 
-        public int InserisciAnnuncio(int idUtente, string titolo, string descrizione, string citta, string indirizzo, string telefono)
+        public int InserisciAnnuncio(int idUtente, string titolo, string descrizione, string regione, string provincia, string citta, string indirizzo, string telefono)
         {
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
-            queryStr = "INSERT INTO swimmy.annuncio (idUtente, titolo, descrizione, citta, indirizzo, telefono) VALUES(?idu, ?titolo,?descr, ?citta, ?indirizzo, ?telefono);" +
+            queryStr = "INSERT INTO swimmy.annuncio (idUtente, titolo, descrizione, regione, provincia, citta, indirizzo, telefono) VALUES(?idu, ?titolo,?descr, ?reg, ?pro, ?citta, ?indirizzo, ?telefono);" +
                 "SELECT LAST_INSERT_ID();";
 
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
@@ -43,6 +45,8 @@ namespace Swimmy.DB
             cmd.Parameters.AddWithValue("?idu", idUtente);
             cmd.Parameters.AddWithValue("?titolo", titolo);
             cmd.Parameters.AddWithValue("?descr", descrizione);
+            cmd.Parameters.AddWithValue("?reg", regione);
+            cmd.Parameters.AddWithValue("?pro", provincia);
             cmd.Parameters.AddWithValue("?citta", citta);
             cmd.Parameters.AddWithValue("?indirizzo", indirizzo);
             cmd.Parameters.AddWithValue("?telefono", telefono);
@@ -66,7 +70,7 @@ namespace Swimmy.DB
             return idAnnuncio;
         }
 
-        public  Annuncio GetAnnuncio(int idAnnuncio)
+        public Annuncio GetAnnuncio(int idAnnuncio)
         {
 
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
@@ -80,18 +84,30 @@ namespace Swimmy.DB
             reader = cmd.ExecuteReader();
 
             Annuncio a = new Annuncio();
-
+            int columnIndex;
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
                     a.IdAnnuncio = idAnnuncio;
-                    a.IdUtente = reader.GetInt32(1);
-                    a.Titolo = reader.GetString(2);
-                    a.Descrizione = reader.GetString(3);
-                    a.Citta = reader.GetString(4);
-                    a.Indirizzo = reader.GetString(5);
-                    a.Telefono = reader.GetString(6);
+
+                    columnIndex = reader.GetOrdinal("idUtente");
+                    a.IdUtente = reader.GetInt32(columnIndex);
+                    columnIndex = reader.GetOrdinal("titolo");
+                    a.Titolo = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("descrizione");
+                    a.Descrizione = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("regione");
+                    a.Regione = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("provincia");
+                    a.Provincia = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("citta");
+                    a.Citta = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("indirizzo");
+                    a.Indirizzo = reader.GetString(columnIndex);
+                    columnIndex = reader.GetOrdinal("telefono");
+                    a.Telefono = reader.GetString(columnIndex);
+
                 }
             }
 
@@ -99,6 +115,141 @@ namespace Swimmy.DB
             conn.Close();
 
             return a;
+        }
+
+        public int InserisciFoto(int idUtente, int idAnnuncio, string urlFoto)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+            queryStr = "INSERT INTO swimmy.foto (idUtente, idAnnuncio, urlFoto) VALUES(?idu, ?ida,?url);" +
+                "SELECT LAST_INSERT_ID();";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.Parameters.AddWithValue("?idu", idUtente);
+            cmd.Parameters.AddWithValue("?ida", idAnnuncio);
+            cmd.Parameters.AddWithValue("?url", urlFoto);
+
+            reader = cmd.ExecuteReader();
+
+
+            int idFoto = -1;
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    idFoto = reader.GetInt32(0);
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return idFoto;
+        }
+
+        public List<string> getListaFotoDiAnnuncio(int idAnnuncio)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+            queryStr = "SELECT urlFoto FROM swimmy.foto WHERE idAnnuncio=?ida;";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.Parameters.AddWithValue("?ida", idAnnuncio);
+
+            reader = cmd.ExecuteReader();
+
+            List<string> listaFoto = new List<string>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    listaFoto.Add(reader["urlFoto"].ToString());
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return listaFoto;
+        }
+
+
+
+        public List<string> GetProvinceDaRegione(string regione)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+            queryStr = "SELECT provincia FROM swimmy.regione_province WHERE regione=?reg;";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.Parameters.AddWithValue("?reg", regione);
+
+            reader = cmd.ExecuteReader();
+
+            List<string> province = new List<string>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    province.Add(reader.GetString(0));
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return province;
+        }
+
+        public List<Annuncio> getListaAnnunci(string regione, string provincia, string citta)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+            queryStr = "SELECT * FROM swimmy.annuncio WHERE provincia=?pro AND regione LIKE ?reg AND citta LIKE ?cit;";
+
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+
+            cmd.Parameters.AddWithValue("?reg", regione);
+            cmd.Parameters.AddWithValue("?pro", "%" + provincia + "%");
+            cmd.Parameters.AddWithValue("?cit", "%" + citta + "%");
+
+            reader = cmd.ExecuteReader();
+
+            List<Annuncio> listaAnnunci = new List<Annuncio>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    var annuncio = new Annuncio();
+                    annuncio.IdAnnuncio = Convert.ToInt32(reader["idAnnuncio"]);
+                    annuncio.IdUtente = Convert.ToInt32(reader["idUtente"]);
+                    annuncio.Titolo = reader["titolo"].ToString();
+                    annuncio.Descrizione = reader["descrizione"].ToString();
+                    annuncio.Regione = reader["regione"].ToString();
+                    annuncio.Provincia = reader["provincia"].ToString();
+                    annuncio.Citta = reader["citta"].ToString();
+                    annuncio.Indirizzo = reader["indirizzo"].ToString();
+                    annuncio.Telefono = reader["telefono"].ToString();
+
+                    listaAnnunci.Add(annuncio);
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return listaAnnunci;
         }
 
 
@@ -130,6 +281,17 @@ namespace Swimmy.DB
             set { descrizione = value; }
         }
 
+        public string Regione
+        {
+            get { return regione; }
+            set { regione = value; }
+        }
+
+        public string Provincia
+        {
+            get { return provincia; }
+            set { provincia = value; }
+        }
 
         public string Citta
         {
