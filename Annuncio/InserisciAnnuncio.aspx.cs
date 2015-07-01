@@ -85,7 +85,7 @@ namespace Swimmy.Account
                             string extension = Path.GetExtension(fuUpload.FileName);
                             string uniqueFileName = Path.ChangeExtension(fuUpload.FileName, DateTime.Now.Ticks.ToString());
 
-                            string serverPath = Server.MapPath("~/") + "App_Data//" + uniqueFileName + extension;
+                            string serverPath = Server.MapPath("~/App_Data/") + uniqueFileName + extension;
                             fuUpload.SaveAs(serverPath);
 
 
@@ -125,7 +125,7 @@ namespace Swimmy.Account
             {
                 fileName = Path.GetFileName(f);
                 //allPhotoPaths.Add("Photos/" + User.Identity.Name + "/" + fileName);
-                allPhotoPaths.Add(Path.Combine(Server.MapPath("~/") + "App_Data", fileName));
+                allPhotoPaths.Add(Path.Combine(Server.MapPath("~/App_Data"), fileName));
             }
 
             rptrUserPhotos.DataSource = allPhotoPaths;
@@ -189,7 +189,7 @@ namespace Swimmy.Account
                     //string fromRootToHome = "..//..//App_Data//";
                     listaFotoDaSalvare.Remove(fromPhotosToExtension);
                     (Session["listaFoto"]) = listaFotoDaSalvare;
-                    string fileToDelete = Server.MapPath("~/") + "App_Data//" + fileName; //Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
+                    string fileToDelete = Server.MapPath("~/App_Data/") + fileName; //Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
                     File.Delete(fileToDelete);
 
                     lblStatus.Text = "<font color='Green'>Foto eliminata/e correttamente.</font>";
