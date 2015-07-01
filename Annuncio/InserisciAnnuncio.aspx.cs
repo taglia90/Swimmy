@@ -91,7 +91,7 @@ namespace Swimmy.Account
 
 
                             string path;
-                            path = "App_Data//" + uniqueFileName + extension;
+                            path = "App_Data/" + uniqueFileName + extension;
 
                             listaFotoDaSalvare.Add(path);//Path.Combine(partialPath + idUtente.ToString(), uniqueFileName + extension));
                             (Session["listaFoto"]) = listaFotoDaSalvare;
@@ -125,7 +125,7 @@ namespace Swimmy.Account
             {
                 fileName = Path.GetFileName(f);
                 //allPhotoPaths.Add("Photos/" + User.Identity.Name + "/" + fileName);
-                allPhotoPaths.Add(Path.Combine(Server.MapPath("~/App_Data"), fileName));
+                allPhotoPaths.Add(Path.Combine(("http://www.swimmy.it/App_Data"), fileName));
             }
 
             rptrUserPhotos.DataSource = allPhotoPaths;
@@ -187,7 +187,7 @@ namespace Swimmy.Account
                     string fromPhotosToExtension = cb.Attributes["special"];
                     string fileName = Path.GetFileName(fromPhotosToExtension);
                     //string fromRootToHome = "..//..//App_Data//";
-                    listaFotoDaSalvare.Remove(fromPhotosToExtension);
+                    listaFotoDaSalvare.Remove("App_Data/" + fileName);
                     (Session["listaFoto"]) = listaFotoDaSalvare;
                     string fileToDelete = Server.MapPath("~/App_Data/") + fileName; //Path.Combine(fromRootToHome, fromPhotosToExtension.Replace(@"http://www.swimmy.it/SwimmyUpload/", ""));
                     File.Delete(fileToDelete);
