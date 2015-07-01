@@ -33,7 +33,7 @@
                             <tr>
                                 <td>
                                     <a href="./Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                        <img src="<%#Eval("UrlFotoPrincipale")%>"
+                                        <img src="<%# "http://www.swimmy.it/"+Eval("UrlFotoPrincipale")%>"
                                             width="100" height="75" style="border: solid" /></a>
                                 </td>
                             </tr>

@@ -90,7 +90,7 @@
                     <asp:Repeater ID="foto" runat="server">
                         <ItemTemplate>
                             <li>
-                                <img src="<%# Container.DataItem %>" alt="" /></li>
+                                <img src="<%# "http://www.swimmy.it/" + Container.DataItem %>" alt="" /></li>
                         </ItemTemplate>
                     </asp:Repeater>
                     <!-- <li>

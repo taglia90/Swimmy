@@ -37,13 +37,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2015 16:37:51</publishTime>
     </File>
     <File Include="Annuncio/Annuncio.aspx">
-      <publishTime>06/22/2015 14:20:47</publishTime>
+      <publishTime>01/07/2015 18:47:26</publishTime>
     </File>
     <File Include="Annuncio/InserisciAnnuncio.aspx">
       <publishTime>06/22/2015 14:20:47</publishTime>
     </File>
     <File Include="Annuncio/ListaAnnunci.aspx">
-      <publishTime>06/22/2015 14:20:47</publishTime>
+      <publishTime>07/01/2015 18:51:17</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>03/18/2015 16:37:59</publishTime>
@@ -52,7 +52,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/24/2015 14:15:59</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll">
-      <publishTime>03/24/2015 14:16:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/DotNetOpenAuth.AspNet.dll">
       <publishTime>03/24/2015 14:16:01</publishTime>
@@ -109,7 +109,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2015 16:38:02</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/08/2013 16:15:08</publishTime>
+      <publishTime>08/07/2013 16:15:08</publishTime>
     </File>
     <File Include="bin/Mono.Math.dll">
       <publishTime>03/24/2015 14:16:04</publishTime>
@@ -127,10 +127,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/24/2015 14:16:04</publishTime>
     </File>
     <File Include="bin/Swimmy.dll">
-      <publishTime>06/22/2015 16:15:08</publishTime>
+      <publishTime>07/01/2015 18:51:34</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>03/18/2015 16:38:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Providers.dll">
       <publishTime>03/24/2015 14:16:57</publishTime>
@@ -442,13 +442,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2015 16:47:09</publishTime>
     </File>
     <File Include="Images/pic07.jpg">
-      <publishTime>12/05/2013 14:48:44</publishTime>
+      <publishTime>05/12/2013 14:48:44</publishTime>
     </File>
     <File Include="Images/pic08.jpg">
       <publishTime>02/20/2015 16:53:36</publishTime>
     </File>
     <File Include="Images/pic09.jpg">
-      <publishTime>12/08/2014 19:27:41</publishTime>
+      <publishTime>08/12/2014 19:27:41</publishTime>
     </File>
     <File Include="Images/pic10.jpg">
       <publishTime>03/18/2015 16:47:09</publishTime>
@@ -491,6 +491,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Index.Master">
       <publishTime>05/07/2015 14:49:22</publishTime>
+    </File>
+    <File Include="indexStatico.html">
+      <publishTime>06/22/2015 14:17:06</publishTime>
     </File>
     <File Include="js/init.js">
       <publishTime>05/09/2015 18:55:27</publishTime>
