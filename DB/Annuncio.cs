@@ -93,22 +93,14 @@ namespace Swimmy.DB
                 {
                     a.IdAnnuncio = idAnnuncio;
 
-                    columnIndex = reader.GetOrdinal("idUtente");
-                    a.IdUtente = reader.GetInt32(columnIndex);
-                    columnIndex = reader.GetOrdinal("titolo");
-                    a.Titolo = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("descrizione");
-                    a.Descrizione = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("regione");
-                    a.Regione = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("provincia");
-                    a.Provincia = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("citta");
-                    a.Citta = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("indirizzo");
-                    a.Indirizzo = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("telefono");
-                    a.Telefono = reader.GetString(columnIndex);
+                    a.IdUtente = Convert.ToInt32(reader["idUtente"]);
+                    a.Titolo = reader["titolo"].ToString();
+                    a.Descrizione = reader["descrizione"].ToString();
+                    a.Regione = reader["regione"].ToString();
+                    a.Provincia = reader["provincia"].ToString();
+                    a.Citta = reader["citta"].ToString();
+                    a.Indirizzo = reader["indirizzo"].ToString();
+                    a.Telefono = reader["telefono"].ToString();
 
                 }
             }

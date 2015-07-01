@@ -40,31 +40,22 @@ namespace Swimmy.DB
 
             reader = cmd.ExecuteReader();
             Utente u = new Utente();
-            int columnIndex;
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
 
                     u.IdUtente = idUtente;
-                    columnIndex = reader.GetOrdinal("username");
-                    u.Username = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("nome");
-                    u.Nome = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("cognome");
-                    u.Cognome = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("email");
-                    u.Email = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("citta");
-                    u.Citta = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("cap");
-                    u.Cap = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("sesso");
-                    u.Sesso = reader.GetString(columnIndex);
-                    columnIndex = reader.GetOrdinal("isProprietario");
-                    u.IsProprietario = reader.GetBoolean(columnIndex);
-                    columnIndex = reader.GetOrdinal("telefono");
-                    u.Telefono = reader.GetString(columnIndex);
+
+                    u.Username = reader["username"].ToString();
+                    u.Nome = reader["nome"].ToString();
+                    u.Cognome = reader["cognome"].ToString();
+                    u.Email = reader["email"].ToString();
+                    u.Citta = reader["citta"].ToString();
+                    u.Cap = reader["cap"].ToString();
+                    u.Sesso = reader["sesso"].ToString();
+                    u.IsProprietario = Convert.ToBoolean(reader["isProprietario"]);
+                    u.Telefono = reader["telefono"].ToString();
 
                 }
             }

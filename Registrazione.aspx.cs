@@ -141,8 +141,8 @@ namespace Swimmy
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["MySqlConnection"].ToString();
             conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
             conn.Open();
-            queryStr = "INSERT INTO swimmy.utente (username, password, nome, cognome, email, isProprietario)" +
-                    "VALUES(?uname,?password,?nome,?cognome,?email,?isProprietario)";
+            queryStr = "INSERT INTO swimmy.utente (username, password, nome, cognome, email, isProprietario, citta, tipoUtente, sesso, posizioneLavorativa, datiPagamento)" +
+                    "VALUES(?uname,?password,?nome,?cognome,?email,?isProprietario,'','','','','')";
             cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
             cmd.Parameters.AddWithValue("?uname", txtUsername.Text);
             cmd.Parameters.AddWithValue("?nome", txtNome.Text);
