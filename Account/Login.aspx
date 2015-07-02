@@ -4,17 +4,13 @@
 
 <asp:Content runat="server" ID="HeaderArticleContent" ContentPlaceHolderID="HeaderArticleContent">
 
-
-
     <!-- Main -->
     <div class="wrapper style1">
-
         <div class="container">
-             <form id="form1" runat="server">
-                  <asp:CustomValidator runat="server" ControlToValidate="txtUsername" ErrorMessage="Email o password errati."
-                OnServerValidate="controllaAccesso" ForeColor="Red" />
-
+            <form id="form1" runat="server">
                 <h2><a href="#">Login</a></h2>
+                <asp:CustomValidator runat="server" ControlToValidate="txtUsername" ErrorMessage="Email o password errati."
+                    OnServerValidate="controllaAccesso" ForeColor="Red" />
                 <p>Email</p>
                 <asp:TextBox ID="txtUsername" Text="" runat="server" />
                 <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtUsername"
@@ -30,11 +26,7 @@
                 <asp:Button ID="submitButton" Text="Accedi" runat="server" OnClick="submitButton_Click" />
             </form>
 
-
-
         </div>
-
     </div>
-
 
 </asp:Content>
