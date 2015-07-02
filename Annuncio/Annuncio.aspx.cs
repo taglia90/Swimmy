@@ -20,20 +20,17 @@ namespace Swimmy.Annuncio
         protected void Page_Load(object sender, EventArgs e)
         {
             nome = (String)(Session["nomeCognome"]);
-            if ((Session["idUtente"]) != null)
-                idUtente = (int)(Session["idUtente"]);
 
-            if(Session["idAnnuncio"]==null){
+            if (Request.QueryString["idAnnuncio"] != null)
                 idAnnuncio = Convert.ToInt32(Request.QueryString["idAnnuncio"]);
-            }else{
-            idAnnuncio = (int)(Session["idAnnuncio"]);
-            }
+            else if ((Session["idUtente"]) != null)
+                idUtente = (int)(Session["idUtente"]);
 
             DB.Annuncio annuncio = dbA.GetAnnuncio(idAnnuncio);
             titoloLabel.Text = annuncio.Titolo;
             descrizioneLabel.Text = annuncio.Descrizione;
             cittaLabel.Text = annuncio.Citta;
-               
+
             if (nome == null || idUtente == 0)
             {
                 indirizzoLabel.Text = "Accedi o registrati per visualizzare l'indirizzo";
