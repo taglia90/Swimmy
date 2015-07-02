@@ -37,14 +37,14 @@
             <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtCap"
                 runat="server" />
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                ControlToValidate="txtCap" ErrorMessage="Cap non valido. È vietato inserire caratteri speciali."
+                ControlToValidate="txtCap" ErrorMessage="Cap non valido. Si possono inserire solo numeri."
                 ValidationExpression="^([0-9]\s?)+$" ForeColor="Red" />
 
             <br />
-            <label>Numero di Telefono</label>
+            <label>Numero di Telefono (senza spazi o trattini)</label>
             <asp:TextBox ID="txtNumeroTelefono" Text="" runat="server" />
             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
-                ControlToValidate="txtNumeroTelefono" ErrorMessage="Cognome non valido. È vietato inserire caratteri speciali."
+                ControlToValidate="txtNumeroTelefono" ErrorMessage="Numero di telefono non valido. Si possono inserire solo numeri."
                 ValidationExpression="^([0-9]\s?)+$" ForeColor="Red" />
 
 

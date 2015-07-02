@@ -58,76 +58,78 @@
 
             <asp:Button ID="submitButton" Text="Cerca" CssClass="button" runat="server" OnClick="submitButton_Click" />
         </form>
-
-          <!--DataKeyNames="idAnnuncio" GroupItemCount="4"
+        <br />
+        <br />
+        <!--DataKeyNames="idAnnuncio" GroupItemCount="4"
                 ItemType="DB.Annuncio" SelectMethod="GetAnnunci"-->
-            <asp:ListView ID="listaAnnunciView" runat="server" >
-              
-                
-                <EmptyDataTemplate>
-                    <table >
+        <asp:ListView ID="listaAnnunciView" runat="server">
+
+
+            <EmptyDataTemplate>
+                <table>
+                    <tr>
+                        <td>Nessun risultato trovato.</td>
+                    </tr>
+                </table>
+            </EmptyDataTemplate>
+            <EmptyItemTemplate>
+                <td>
+                <td />
+            </EmptyItemTemplate>
+            <GroupTemplate>
+                <tr id="itemPlaceholderContainer" runat="server">
+                    <td id="itemPlaceholder" runat="server"></td>
+                </tr>
+            </GroupTemplate>
+            <ItemTemplate>
+                <td runat="server">
+                    <table>
                         <tr>
-                            <td>Nessun risultato trovato.</td>
+                            <td>
+                                <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
+                                    <img src="<%#"http://www.swimmy.it/"+Eval("UrlFotoPrincipale")%>"
+                                        width="100" height="75" style="border: solid" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
+                                    <span>
+                                        <%#Eval("Titolo")%>
+                                    </span>
+                                </a>
+                                <br />
+                                <span>
+                                    <!-- <b>Price: </b><#:String.Format("{0:c}", Item.UnitPrice)%>-->
+                                </span>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
                         </tr>
                     </table>
-                </EmptyDataTemplate>
-                <EmptyItemTemplate>
-                    <td><td/>
-                </EmptyItemTemplate>
-                <GroupTemplate>
-                    <tr id="itemPlaceholderContainer" runat="server">
-                        <td id="itemPlaceholder" runat="server"></td>
-                    </tr>
-                </GroupTemplate>
-                <ItemTemplate>
-                    <td runat="server">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                        <img src="<%#Eval("UrlFotoPrincipale")%>"
-                                            width="100" height="75" style="border: solid" /></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                        <span>
-                                            <%#Eval("Titolo")%><!--(string)Eval("titolo")-->
-                                        </span>
-                                    </a>
-                                    <br />
-                                    <span>
-                                       <!-- <b>Price: </b><#:String.Format("{0:c}", Item.UnitPrice)%>-->
-                                    </span>
-                                    <br />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                        </p>
-                    </td>
-                </ItemTemplate>
-                <LayoutTemplate>
-                    <table style="width:100%;">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <table id="groupPlaceholderContainer" runat="server" style="width:100%">
-                                        <tr id="groupPlaceholder"></tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                            </tr>
-                            <tr></tr>
-                        </tbody>
-                    </table>
-                </LayoutTemplate>
-            </asp:ListView>
+                    </p>
+                </td>
+            </ItemTemplate>
+            <LayoutTemplate>
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
+                                    <tr id="groupPlaceholder"></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </LayoutTemplate>
+        </asp:ListView>
 
     </section>
 

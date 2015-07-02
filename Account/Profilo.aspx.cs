@@ -10,14 +10,15 @@ namespace Swimmy.Account
     public partial class Profilo : System.Web.UI.Page
     {
         String nome;
-        int idUtente;
+        int idUtente = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             nome = (String)(Session["nomeCognome"]);
-            idUtente = (int)(Session["idUtente"]);
+            if (Session["idUtente"] != null)
+                idUtente = (int)(Session["idUtente"]);
 
-            if (nome == null)
+            if (nome == null || idUtente == 0)
             {
                 Response.BufferOutput = true;
                 Response.Redirect("~/Default.aspx", false);

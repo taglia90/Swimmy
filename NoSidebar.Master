@@ -81,7 +81,7 @@
                 <li><a href="<%= Page.ResolveClientUrl("~/Annuncio/InserisciAnnuncio.aspx")%>">Inserisci annuncio</a></li>
                 <li><a href="<%= Page.ResolveClientUrl("~/Annuncio/ListaAnnunci.aspx")%>">I tuoi annunci</a></li>
                 <li><a href="<%= Page.ResolveClientUrl("~/Account/Ricerca.aspx")%>">Cerca</a></li>
-                <li><a href="<%= Page.ResolveClientUrl("~/Default.aspx")%>" onclick="logoutButton_Click">LogOut</a></li>
+                <li><a href="#" runat="server" onserverclick="logoutButton_Click">LogOut</a></li>
                 <%}
                   else
                   { %>

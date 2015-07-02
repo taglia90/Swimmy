@@ -11,7 +11,7 @@ namespace Swimmy
     public partial class NoSidebarMaster : MasterPage
     {
         protected bool isLoggato = false;
-        private int idUtente = 0;
+        //private int idUtente = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
