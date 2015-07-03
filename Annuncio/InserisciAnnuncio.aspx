@@ -24,7 +24,7 @@
 
 
             <label>Descrizione</label>
-            <asp:TextBox ID="txtDescrizione" Text="" runat="server" Height="300" />
+            <asp:TextBox ID="txtDescrizione" Text="" runat="server" Height="300" TextMode="MultiLine"/>
             <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtDescrizione"
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtDescrizioneExprValidator" runat="server"

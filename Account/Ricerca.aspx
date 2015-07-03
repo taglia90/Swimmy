@@ -60,11 +60,10 @@
         </form>
         <br />
         <br />
-        <!--DataKeyNames="idAnnuncio" GroupItemCount="4"
-                ItemType="DB.Annuncio" SelectMethod="GetAnnunci"-->
+        <asp:Label Visible="false" ID="lblRisultato" Text="Ecco tutte le piscine disponibili nella zona selezionata:" runat="server"></asp:Label>
+        <br />
+        <br />
         <asp:ListView ID="listaAnnunciView" runat="server">
-
-
             <EmptyDataTemplate>
                 <table>
                     <tr>
@@ -88,22 +87,28 @@
                             <td>
                                 <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
                                     <img src="<%#"http://www.swimmy.it/"+Eval("UrlFotoPrincipale")%>"
-                                        width="100" height="75" style="border: solid" /></a>
+                                        width="320" height="240" style="border: solid" /></a>
                             </td>
+
                         </tr>
-                        <tr>
-                            <td>
-                                <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                    <span>
-                                        <%#Eval("Titolo")%>
-                                    </span>
-                                </a>
-                                <br />
+                        <td>
+
+                            <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
                                 <span>
-                                    <!-- <b>Price: </b><#:String.Format("{0:c}", Item.UnitPrice)%>-->
+                                    <b>
+                                        <%#Eval("Titolo")%>
+                                    </b>
                                 </span>
-                                <br />
-                            </td>
+                            </a>
+                            <br />
+                            <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
+                                <span>
+                                    <%#Eval("Descrizione")%>
+                                </span>
+                            </a>
+
+                        </td>
+                        <tr>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>

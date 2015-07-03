@@ -35,9 +35,7 @@ namespace Swimmy.Account
         protected void submitButton_Click(object sender, EventArgs e)
         {
             GetAnnunci();
-            //   dbU.AggiornaUtente(idUtente, txtCitta.Text, txtCap.Text, txtNumeroTelefono.Text);
-            //  Response.BufferOutput = true;
-            //  Response.Redirect("~/Account/Profilo.aspx", false);
+            lblRisultato.Visible = true;
         }
 
 
@@ -48,6 +46,7 @@ namespace Swimmy.Account
             provinciaDDL.DataSource = listaProvince;
             provinciaDDL.DataBind();
             GetAnnunci();
+            lblRisultato.Visible = true;
         }
 
         public List<DB.Annuncio> GetAnnunci()

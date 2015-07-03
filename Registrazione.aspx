@@ -28,7 +28,10 @@
     <section>
         <form id="form" runat="server" class="form">
             <h2><a href="#">Registrazione</a></h2>
-
+            <p>Qua di seguito puoi registrarti al nostro Sito. Grazie alla Registrazione potrai inserire annunci, 
+                ricercare le piscine all'interno del nostro database e godere di tutte le funzionalità del nostro sito.
+                Se sei proprietario di una piscina e vuoi inserire un annuncio potrai farlo successivamente a questo step
+                 cliccando sul pulsante "Inserisci annuncio". Il team di Swimmy ti da il benvenuto!!!</p>
 
             <label>Nome</label>
             <asp:TextBox ID="txtNome" Text="" runat="server" />
@@ -58,22 +61,22 @@
                     OnServerValidate="controllaUsername" ForeColor="Red" />
                 -->
 
-                <label>Password (minimo 6 caratteri)</label>
-                <asp:TextBox ID="txtPassword1" Text="Password" TextMode="Password" runat="server" />
-                <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtPassword1"
-                    runat="server" />
-                <asp:RegularExpressionValidator ID="txtPasswordExprValidator" runat="server"
-                    ControlToValidate="txtPassword1" ErrorMessage="Devi inserire min 6, max 40 caratteri, numeri, _ * – + ! ? , : ; . e lettere accentate."
-                    ValidationExpression="^[a-zA-Z0-9_\*\-\+\!\?\,\:\;\.\xE0\xE8\xE9\xF9\xF2\xEC\x27]{6,40}" ForeColor="Red" />
+            <label>Password (minimo 6 caratteri)</label>
+            <asp:TextBox ID="txtPassword1" Text="Password" TextMode="Password" runat="server" />
+            <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtPassword1"
+                runat="server" />
+            <asp:RegularExpressionValidator ID="txtPasswordExprValidator" runat="server"
+                ControlToValidate="txtPassword1" ErrorMessage="Devi inserire min 6, max 40 caratteri, numeri, _ * – + ! ? , : ; . e lettere accentate."
+                ValidationExpression="^[a-zA-Z0-9_\*\-\+\!\?\,\:\;\.\xE0\xE8\xE9\xF9\xF2\xEC\x27]{6,40}" ForeColor="Red" />
 
 
-                <label>Conferma Password</label>
-                <asp:TextBox ID="txtPassword2" Text="Password" TextMode="Password" runat="server" />
-                <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtPassword2"
-                    runat="server" />
-                <asp:CompareValidator runat="server" ControlToValidate="txtPassword2" ControlToCompare="txtPassword1"
-                    ErrorMessage="Le password inserite non sono uguali!" ForeColor="Red" />
-                
+            <label>Conferma Password</label>
+            <asp:TextBox ID="txtPassword2" Text="Password" TextMode="Password" runat="server" />
+            <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtPassword2"
+                runat="server" />
+            <asp:CompareValidator runat="server" ControlToValidate="txtPassword2" ControlToCompare="txtPassword1"
+                ErrorMessage="Le password inserite non sono uguali!" ForeColor="Red" />
+
 
 
             <label>Email</label>
