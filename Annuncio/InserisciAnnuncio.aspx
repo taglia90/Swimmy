@@ -20,7 +20,7 @@
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtTitoloExprValidator" runat="server"
                 ControlToValidate="txtTitolo" ErrorMessage="Titolo non valido. È vietato inserire caratteri speciali."
-                ValidationExpression="^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2C\x2E]\s?)+$" ForeColor="Red" />
 
 
             <label>Descrizione</label>
@@ -29,7 +29,7 @@
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtDescrizioneExprValidator" runat="server"
                 ControlToValidate="txtDescrizione" ErrorMessage="Descrizione non valida. È vietato inserire caratteri speciali."
-                ValidationExpression="^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\r?\n?\s?)+$" ForeColor="Red" />
 
             <label>Regione</label>
             <asp:DropDownList ID="regioneDDL" runat="server" Width="200px" AutoPostBack="true" OnSelectedIndexChanged="popolaProvinciaDDL">
@@ -76,7 +76,7 @@
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtIndirizzoExprValidator" runat="server"
                 ControlToValidate="txtIndirizzo" ErrorMessage="Indirizzo non valido. È vietato inserire caratteri speciali."
-                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2C]\s?)+$" ForeColor="Red" />
             <br />
 
             <label>Numero di telefono</label>
