@@ -177,7 +177,7 @@ namespace Swimmy.DB
             }
         }*/
 
-        public string GetEmail(String nomeUtente)
+      /*  public string GetEmail(String nomeUtente)
         {
             string query = "SELECT email FROM utente WHERE username=?uname";
             string email = "";
@@ -213,10 +213,10 @@ namespace Swimmy.DB
                 //ERRORE DEL DATABASE
             }
             return email;
-        }
+        }*/
 
 
-        public int GetIdUtente(String nomeUtente)
+      /*  public int GetIdUtente(String nomeUtente)
         {
             string query = "SELECT idUtente FROM utente WHERE username=?uname";
             int idUtente = -1;
@@ -249,9 +249,9 @@ namespace Swimmy.DB
                 //ERRORE DEL DATABASE
             }
             return idUtente;
-        }
+        }*/
 
-        public void AggiornaUtente(int idUtente, string titolo, string descrizione)
+      /*  public void AggiornaUtente(int idUtente, string titolo, string descrizione)
         {
             string query = "UPDATE swimmy.utente SET name='Joe', age='22' WHERE idUtente='?idUtente'";
 
@@ -270,7 +270,7 @@ namespace Swimmy.DB
                 //close connection
                 this.CloseConnection();
             }
-        }
+        }*/
 
         //Count statement
        /* public int Count()

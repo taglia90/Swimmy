@@ -19,7 +19,7 @@ namespace Swimmy
 
             OpenAuth.AuthenticationClients.AddFacebook(
                 appId: "1625471347674242",
-                appSecret: "segreto app Facebook personale");
+                appSecret: "1230c9cd19c09d39c6ffb873f3b39886");
 
             //OpenAuth.AuthenticationClients.AddMicrosoft(
             //    clientId: "ID client account Microsoft personale",

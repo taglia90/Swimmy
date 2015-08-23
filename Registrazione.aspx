@@ -34,7 +34,7 @@
                  cliccando sul pulsante "Inserisci annuncio". Il team di Swimmy ti da il benvenuto!!!</p>
 
             <label>Nome</label>
-            <asp:TextBox ID="txtNome" Text="" runat="server" />
+            <asp:TextBox ID="txtNome" Text="" runat="server" onblur="if(this.value=='')this.value=this.defaultValue;" value="Nome" onfocus="if(this.value==this.defaultValue)this.value='';"/>
             <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtNome"
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtNomeExprValidator" runat="server"

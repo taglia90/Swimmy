@@ -149,19 +149,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Pagine non utilizzate\About.aspx" />
     <Content Include="Account\Ricerca.aspx" />
     <Content Include="Annuncio\ListaAnnunci.aspx" />
     <Content Include="Annuncio\InserisciAnnuncio.aspx" />
     <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
+    <Content Include="Pagine non utilizzate\Manage.aspx" />
     <Content Include="Account\ModificaProfilo.aspx" />
     <Content Include="Account\Profilo.aspx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Pagine non utilizzate\Register.aspx" />
+    <Content Include="Pagine non utilizzate\RegisterExternalLogin.aspx" />
     <Content Include="Annuncio\Annuncio.aspx" />
     <Content Include="ConfermaRegistrazione.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Pagine non utilizzate\Contact.aspx" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\ie\backgroundsize.min.htc" />
     <Content Include="css\ie\html5shiv.js" />
@@ -185,7 +185,6 @@
     <Content Include="images\bullet.png" />
     <Content Include="images\header.jpg" />
     <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="images\pic01.jpg" />
     <Content Include="images\pic02.jpg" />
     <Content Include="images\pic03.jpg" />
@@ -219,6 +218,7 @@
     <Content Include="Global.Master" />
     <Content Include="right-sidebar.html" />
     <Content Include="NoSidebar.Master" />
+    <Content Include="favicon.ico" />
     <None Include="Properties\PublishProfiles\Swimmy.pubxml" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -279,11 +279,11 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Pagine non utilizzate\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Pagine non utilizzate\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
@@ -293,25 +293,25 @@
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
+    <Compile Include="Pagine non utilizzate\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
+    <Compile Include="Pagine non utilizzate\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Register.aspx.cs">
+    <Compile Include="Pagine non utilizzate\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
+    <Compile Include="Pagine non utilizzate\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+    <Compile Include="Pagine non utilizzate\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+    <Compile Include="Pagine non utilizzate\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -322,11 +322,11 @@
     <Compile Include="ConfermaRegistrazione.aspx.designer.cs">
       <DependentUpon>ConfermaRegistrazione.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Pagine non utilizzate\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Pagine non utilizzate\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DB\Annuncio.cs" />

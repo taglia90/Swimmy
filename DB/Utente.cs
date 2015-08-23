@@ -102,18 +102,47 @@ namespace Swimmy.DB
             conn.Open();
             queryStr = "UPDATE swimmy.utente SET citta=?citta, cap=?cap, telefono=?telefono WHERE idUtente=?idUtente";
 
-            cmd = new MySql.Data.MySqlClient.MySqlCommand(queryStr, conn);
+            MySqlCommand cmd = new MySqlCommand(queryStr, conn);
             cmd.Parameters.AddWithValue("?idUtente", idUtente);
             cmd.Parameters.AddWithValue("?citta", citta);
             cmd.Parameters.AddWithValue("?cap", cap);
             cmd.Parameters.AddWithValue("?telefono", telefono);
-
-            reader = cmd.ExecuteReader();
-
-            reader.Close();
+            cmd.ExecuteNonQuery();
             conn.Close();
 
             return;
+        }
+
+        public int GetIdUtente(String nomeUtente)
+        {
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection(connString);
+            conn.Open();
+
+            string query = "SELECT idUtente FROM utente WHERE username=?uname";
+            int idUtente = -1;
+
+
+            //Create Command
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("?uname", nomeUtente);
+            //Create a data reader and Execute the command
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            //Read the data and store them in the list
+            while (dataReader.Read())
+            {
+                idUtente = dataReader.GetInt32(0);
+            }
+
+            //close Data Reader
+            dataReader.Close();
+
+            //close Connection
+            conn.Close();
+
+
+            return idUtente;
         }
 
         #region getters & setters
