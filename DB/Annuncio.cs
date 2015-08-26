@@ -21,8 +21,6 @@ namespace Swimmy.DB
         private string telefono;
         private string urlFotoPrincipale;
 
-
-
         MySql.Data.MySqlClient.MySqlConnection conn;
         MySql.Data.MySqlClient.MySqlCommand cmd;
         MySql.Data.MySqlClient.MySqlDataReader reader;
@@ -86,7 +84,6 @@ namespace Swimmy.DB
             reader = cmd.ExecuteReader();
 
             Annuncio a = new Annuncio();
-            int columnIndex;
             if (reader.HasRows)
             {
                 while (reader.Read())

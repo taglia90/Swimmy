@@ -47,7 +47,7 @@ namespace Swimmy.Annuncio
                 isLoggato = true;
                 indirizzoLabel.Text = annuncio.Indirizzo;
                 telefonoLabel.Text = annuncio.Telefono;
-                emailLabel.Text = dbU.GetEmail(idUtente);
+                emailLabel.Text = dbU.GetEmail(annuncio.IdUtente);
 
                 //popolo il Repeater
                 List<string> listaFoto = dbA.getListaFotoDiAnnuncio(idAnnuncio);

@@ -24,12 +24,12 @@
 
 
             <label>Descrizione</label>
-            <asp:TextBox ID="txtDescrizione" Text="" runat="server" Height="300" TextMode="MultiLine"/>
+            <asp:TextBox ID="txtDescrizione" Text="" runat="server" Height="300" TextMode="MultiLine" />
             <asp:RequiredFieldValidator ErrorMessage="Campo obbligatorio" ForeColor="Red" ControlToValidate="txtDescrizione"
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtDescrizioneExprValidator" runat="server"
                 ControlToValidate="txtDescrizione" ErrorMessage="Descrizione non valida. È vietato inserire caratteri speciali."
-                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\r?\n?\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2c\x2e\x20\x21\x3f\x28\x29\xc0\xc1\xc8\xc9\xcc\xcd\xd2\xd3\xd9\xda]\r?\n?\s?)+$" ForeColor="Red" />
 
             <label>Regione</label>
             <asp:DropDownList ID="regioneDDL" runat="server" Width="200px" AutoPostBack="true" OnSelectedIndexChanged="popolaProvinciaDDL">
@@ -68,7 +68,7 @@
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtCittaExprValidator" runat="server"
                 ControlToValidate="txtCitta" ErrorMessage="Città non valida. È vietato inserire caratteri speciali."
-                ValidationExpression="^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27]\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2c]\s?)+$" ForeColor="Red" />
             <br />
             <label>Indirizzo</label>
             <asp:TextBox ID="txtIndirizzo" Text="" runat="server" Width="700" />
@@ -76,7 +76,7 @@
                 runat="server" />
             <asp:RegularExpressionValidator ID="txtIndirizzoExprValidator" runat="server"
                 ControlToValidate="txtIndirizzo" ErrorMessage="Indirizzo non valido. È vietato inserire caratteri speciali."
-                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2C]\s?)+$" ForeColor="Red" />
+                ValidationExpression="^([0-9a-zA-Z\xE0\xE8\xE9\xF9\xF2\xEC\x27\x2C\x2e]\s?)+$" ForeColor="Red" />
             <br />
 
             <label>Numero di telefono</label>
