@@ -149,6 +149,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\nessunaFoto.jpg" />
     <Content Include="Pagine non utilizzate\About.aspx" />
     <Content Include="Account\Ricerca.aspx" />
     <Content Include="Annuncio\ListaAnnunci.aspx" />

@@ -49,11 +49,16 @@ namespace Swimmy.Annuncio
                 telefonoLabel.Text = annuncio.Telefono;
                 emailLabel.Text = dbU.GetEmail(annuncio.IdUtente);
 
-                //popolo il Repeater
-                List<string> listaFoto = dbA.getListaFotoDiAnnuncio(idAnnuncio);
-                foto.DataSource = listaFoto; //può essere ad esempio un Array o una List di stringhe
-                foto.DataBind();
+               
             }
+
+            //popolo il Repeater
+            List<string> listaFoto = dbA.getListaFotoDiAnnuncio(idAnnuncio);
+            if (listaFoto.Count == 0)
+                listaFoto.Add("~/images/nessunaFoto.jpg");
+
+            foto.DataSource = listaFoto; //può essere ad esempio un Array o una List di stringhe
+            foto.DataBind();
 
 
         }
