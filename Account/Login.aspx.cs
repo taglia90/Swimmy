@@ -21,7 +21,8 @@ namespace Swimmy.Account
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtUsername.Attributes.Add("placeholder", "Email");
+            txtPassword.Attributes.Add("placeholder", "Password");
         }
 
 
@@ -100,6 +101,10 @@ namespace Swimmy.Account
         protected void controllaAccesso(object source, ServerValidateEventArgs args)
         {
             args.IsValid = isLoginValido;
+        }
+
+        private void loginFacebook()
+        {
         }
 
 

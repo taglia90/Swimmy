@@ -30,6 +30,12 @@ namespace Swimmy
         {
             coloreTextBox = txtUsername.ForeColor;
             //RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
+
+            txtNome.Attributes.Add("placeholder", "Nome");
+            txtCognome.Attributes.Add("placeholder", "Cognome");
+            txtPassword1.Attributes.Add("placeholder", "Password (minimo 6 caratteri)");
+            txtPassword2.Attributes.Add("placeholder", "Conferma password");
+            txtEmail.Attributes.Add("placeholder", "Email");
         }
 
 

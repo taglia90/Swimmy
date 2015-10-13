@@ -33,6 +33,12 @@ namespace Swimmy.Account
             }
             else
             {
+                txtTitolo.Attributes.Add("placeholder", "Titolo");
+                txtDescrizione.Attributes.Add("placeholder", "Descrizione");
+                txtCitta.Attributes.Add("placeholder", "Città");
+                txtIndirizzo.Attributes.Add("placeholder", "Indirizzo");
+                txtTelefono.Attributes.Add("placeholder", "Numero di telefono");
+
                 if ((Session["listaFoto"]) == null)
                     listaFotoDaSalvare = new List<string>();
                 else

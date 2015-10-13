@@ -15,6 +15,11 @@ namespace Swimmy.Account
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtCitta.Attributes.Add("placeholder", "Città");
+            txtCap.Attributes.Add("placeholder", "CAP");
+            txtNumeroTelefono.Attributes.Add("placeholder", "Numero di Telefono (senza spazi o trattini)");
+            
+
             nome = (String)(Session["nomeCognome"]);
             idUtente = (int)(Session["idUtente"]);
 

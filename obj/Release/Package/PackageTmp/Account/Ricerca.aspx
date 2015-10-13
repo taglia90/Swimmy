@@ -60,75 +60,51 @@
         </form>
         <br />
         <br />
-        <!--DataKeyNames="idAnnuncio" GroupItemCount="4"
-                ItemType="DB.Annuncio" SelectMethod="GetAnnunci"-->
-        <asp:ListView ID="listaAnnunciView" runat="server">
-
-
+        <asp:Label Visible="false" ID="lblRisultato" Text="Ecco tutte le piscine disponibili nella zona selezionata:" runat="server"></asp:Label>
+        <br />
+        <br />
+        <asp:ListView ID="listaAnnunciView" runat="server" GroupItemCount="3">
             <EmptyDataTemplate>
-                <table>
-                    <tr>
-                        <td>Nessun risultato trovato.</td>
-                    </tr>
-                </table>
+                <article class="4u special">
+                    <header>
+                        <h3>Nessun risultato trovato</h3>
+                    </header>
+                </article>
             </EmptyDataTemplate>
             <EmptyItemTemplate>
-                <td>
-                <td />
+                <div></div>
             </EmptyItemTemplate>
+
+            <LayoutTemplate>
+                <div class="row" id="groupPlaceholderContainer" runat="server">
+                    <div id="groupPlaceholder" runat="server"></div>
+                </div>
+
+            </LayoutTemplate>
             <GroupTemplate>
-                <tr id="itemPlaceholderContainer" runat="server">
-                    <td id="itemPlaceholder" runat="server"></td>
-                </tr>
+                <div id="itemPlaceholderContainer" runat="server">
+                    <div id="itemPlaceholder" runat="server"></div>
+                </div>
             </GroupTemplate>
             <ItemTemplate>
-                <td runat="server">
-                    <table>
-                        <tr>
-                            <td>
-                                <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                    <img src="<%#"http://www.swimmy.it/"+Eval("UrlFotoPrincipale")%>"
-                                        width="100" height="75" style="border: solid" /></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
-                                    <span>
-                                        <%#Eval("Titolo")%>
-                                    </span>
-                                </a>
-                                <br />
+                <div runat="server">
+                    <article class="4u special">
+                        <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>" class="image featured">
+                            <img src="<%#"http://www.swimmy.it/"+Eval("UrlFotoPrincipale")%>" alt="" /></a>
+                        <header>
+                            <h3><a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>"><%#Eval("Titolo")%></a></h3>
+                        </header>
+                        <p>
+                            <a href="../Annuncio/Annuncio.aspx?idAnnuncio=<%#Eval("IdAnnuncio")%>">
                                 <span>
-                                    <!-- <b>Price: </b><#:String.Format("{0:c}", Item.UnitPrice)%>-->
+                                    <%#Eval("Descrizione")%>
                                 </span>
-                                <br />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                    </table>
-                    </p>
-                </td>
+                            </a>
+                        </p>
+                    </article>
+
+                </div>
             </ItemTemplate>
-            <LayoutTemplate>
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table id="groupPlaceholderContainer" runat="server" style="width: 100%">
-                                    <tr id="groupPlaceholder"></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr></tr>
-                    </tbody>
-                </table>
-            </LayoutTemplate>
         </asp:ListView>
 
     </section>
