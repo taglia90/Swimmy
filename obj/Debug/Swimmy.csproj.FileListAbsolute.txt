@@ -167,4 +167,3 @@ C:\Swimmy\Swimmy\bin\it\Microsoft.AspNet.Membership.OpenAuth.resources.dll
 C:\Swimmy\Swimmy\bin\it\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Swimmy\Swimmy\obj\Debug\Swimmy.dll
 C:\Swimmy\Swimmy\obj\Debug\Swimmy.pdb
-C:\Swimmy\Swimmy\obj\Debug\Swimmy.csprojResolveAssemblyReference.cache

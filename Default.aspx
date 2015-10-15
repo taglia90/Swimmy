@@ -9,36 +9,18 @@
 
     <header>
         <h2>Stiamo arrivando!</h2>
-        <p>Glu glu glu! Rimani in contatto con noi!</p>
+        <p>Rimani in contatto con noi!</p>
         <p>
             Registrati per essere informato non appena il servizio sarà operativo e per poter essere tra i primi
                      ad usufruire della nostra piattaforma!
         </p>
-
-        <section id="login">
-            <asp:LoginView runat="server" ViewStateMode="Disabled">
-                <AnonymousTemplate>
-                    <ul>
-                        <li><a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Esegui registrazione</a></li>
-                        <br />
-                        <li><a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a></li>
-                        <br />
-                        <li><a id="ricercaLink" runat="server" class="button" href="~/Account/Ricerca.aspx">Effettua una ricerca</a></li>
-                    </ul>
-                </AnonymousTemplate>
-                <LoggedInTemplate>
-                    <p>
-                        Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                            <asp:LoginName runat="server" CssClass="username" />
-                        </a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Disconnetti" LogoutPageUrl="~/" />
-                    </p>
-                </LoggedInTemplate>
-            </asp:LoginView>
-        </section>
-
-
     </header>
+    <footer>
+        <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Registrati</a>
+        <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a>
+        <a id="ricercaLink" runat="server" class="button" href="~/Account/Ricerca.aspx">Cerca una piscina</a>
+    </footer>
+    <br />
     <div class="row">
         <article class="4u special">
             <a href="#" class="image featured">

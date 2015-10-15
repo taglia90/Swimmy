@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-desktop.css" />
     <link rel="stylesheet" href="css/style-noscript.css" />
+    <link rel="stylesheet" href="css/style-narrower.css" />
+    <!--<link rel="stylesheet" href="css/style-mobile.css" />-->
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 8]><script src="<%= Page.ResolveClientUrl("~/css/ie/html5shiv.js")%>"></script><![endif]-->
     <script src="<%= Page.ResolveClientUrl("~/js/jquery.min.js")%>"></script>
@@ -59,11 +61,23 @@
                 // The person is logged into Facebook, but not your app.
                 document.getElementById('status').innerHTML = 'Please log ' +
                   'into this app.';
+                FB.login(function (response) {
+                    // handle the response
+                }, {
+                    scope: 'publish_actions,email',
+                    return_scopes: true
+                });
             } else {
                 // The person is not logged into Facebook, so we're not sure if
                 // they are logged into this app or not.
                 document.getElementById('status').innerHTML = 'Please log ' +
                   'into Facebook.';
+                FB.login(function (response) {
+                    // handle the response
+                }, {
+                    scope: 'publish_actions,email',
+                    return_scopes: true
+                });
             }
         }
 
@@ -122,10 +136,10 @@
         // successful.  See statusChangeCallback() for when this call is made.
         function testAPI() {
             console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function (response) {
+            FB.api('/me?fields=name,email', function (response) {
                 console.log('Successful login for: ' + response.name);
                 document.getElementById('status').innerHTML =
-                  'Thanks for logging in, ' + response.name + '!';
+                  'Thanks for logging in, ' + response.email + '!';
             });
         }
     </script>

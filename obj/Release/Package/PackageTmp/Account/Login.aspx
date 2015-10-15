@@ -2,10 +2,6 @@
 
 <asp:Content runat="server" ID="HeaderArticleContent" ContentPlaceHolderID="HeaderArticleContent">
 
-
-
-
-
     <!-- Main -->
     <div class="wrapper style1">
         <div class="container">

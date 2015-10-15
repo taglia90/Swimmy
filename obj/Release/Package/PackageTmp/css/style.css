@@ -1069,21 +1069,20 @@ header .icon.circled {
 
 .containerMini {
     width: 40%;
-    min-width:500px;
     margin-left: 30%;
     background: #f8f8f8;
     border: #cbcbcb 1px solid;
     margin-top: 50px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
+
 .formMini {
-	width: 80% !important;
-	margin-left: 10% !important;
-	margin-bottom: 20px;
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-bottom: 20px;
 }
 
-.textArea{
+.textArea {
     border: #cbcbcb 1px solid;
-	border-radius: 3em !important;
-	
+    border-radius: 3em !important;
 }

@@ -105,6 +105,14 @@ namespace Swimmy.Account
 
         private void loginFacebook()
         {
+
+
+
+            //Session["idUtente"] = idU;
+            //Session["nomeCognome"] = nome;
+            Response.BufferOutput = true;
+            Response.Redirect("Profilo.aspx", false);
+
         }
 
 
