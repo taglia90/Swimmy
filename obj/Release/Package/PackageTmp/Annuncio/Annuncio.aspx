@@ -49,76 +49,94 @@
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="HeaderArticleContent">
 
-    <!-- Main -->
-    <section>
-        <form id="form" runat="server" class="form">
-            <h2><a href="#">Annuncio</a></h2>
 
-
-            <label>Titolo</label>
+    <header>
+        <!--<label>Titolo</label>-->
+        <h2>
             <asp:Label ID="titoloLabel" Text="" runat="server" />
-            <br />
-            <br />
-            <label>Descrizione</label>
-            <asp:Label ID="descrizioneLabel" Text="" runat="server" />
-            <br />
-            <br />
-            <label>Email</label>
-            <asp:Label ID="emailLabel" Text="" runat="server" />
-            <br />
-            <br />
-            <label>Città</label>
-            <asp:Label ID="cittaLabel" Text="" runat="server" />
-            <br />
-            <br />
-            <label>Indirizzo</label>
-            <asp:Label ID="indirizzoLabel" Text="" runat="server" />
-            <br />
-            <br />
-            <label>Numero di telefono</label>
-            <asp:Label ID="telefonoLabel" Text="" runat="server" />
+        </h2>
 
-            <br />
+    </header>
 
 
+    <div class="rslides_container">
 
+        <ul class="rslides" id="slider2">
 
-            <div class="rslides_container">
-
-                <ul class="rslides" id="slider2">
-
-                    <asp:Repeater ID="foto" runat="server">
-                        <ItemTemplate>
-                            <li>
-                                <img src="<%# "http://www.swimmy.it/" + Container.DataItem %>" alt="" /></li>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                    <!-- <li>
+            <asp:Repeater ID="foto" runat="server">
+                <ItemTemplate>
+                    <li>
+                        <a href="#" class="image featured">
+                            <img src="<%# "http://www.swimmy.it/" + Container.DataItem %>" alt="" /></a>
+                    </li>
+                </ItemTemplate>
+            </asp:Repeater>
+            <!-- <li>
                         <img src="../images/pic07.jpg" alt=""></li>
                     <li>
                         <img src="../images/pic08.jpg" alt=""></li>
                     <li>
                         <img src="../images/pic09.jpg" alt=""></li>-->
-                </ul>
-            </div>
+        </ul>
+    </div>
 
+    <section>
+        <header>
+            <h3>Descrizione</h3>
+        </header>
+        <p>
+            <asp:Label ID="descrizioneLabel" Text="" runat="server" />
+        </p>
+    </section>
+    <section>
+        <header>
+            <h3>Email</h3>
+        </header>
+        <p>
+            <asp:Label ID="emailLabel" Text="" runat="server" />
+        </p>
+    </section>
+    <section>
+        <header>
+            <h3>Città</h3>
+        </header>
+        <p>
+            <asp:Label ID="cittaLabel" Text="" runat="server" />
 
-            <br />
-            <br />
+        </p>
+    </section>
+    <section>
+        <header>
+            <h3>Indirizzo</h3>
+        </header>
+        <p>
+            <asp:Label ID="indirizzoLabel" Text="" runat="server" />
 
-            <%if (isLoggato)
-              { %>
-            <asp:Button ID="submitButton" Text="Torna al tuo profilo" CssClass="button" runat="server" OnClick="submitButton_Click" />
-            <%}
-              else
-              { %>
-            <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Esegui registrazione</a>
-            <br />
-            <br />
-            <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a>
+        </p>
+    </section>
+    <section>
+        <header>
+            <h3>Descrizione</h3>
+        </header>
+        <p>
+            <asp:Label ID="telefonoLabel" Text="" runat="server" />
 
-            <%} %>
-        </form>
+        </p>
+    </section>
+    <section>
+
+        <%if (isLoggato)
+          { %>
+        <asp:Button ID="submitButton" Text="Torna al tuo profilo" CssClass="button" runat="server" OnClick="submitButton_Click" />
+        <%}
+          else
+          { %>
+        <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Esegui registrazione</a>
+        <br />
+        <br />
+        <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a>
+
+        <%} %>
     </section>
 
 </asp:Content>

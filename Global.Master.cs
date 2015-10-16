@@ -67,7 +67,26 @@ namespace Swimmy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //#region
+            //if (!string.IsNullOrEmpty(Convert.ToString(Session["lang"])))
+            //{
+            //    if (Convert.ToString(Session["lang"]) == "en")
+            //    {
+            //        linkItalianoLang.Visible = true;
+            //        linkEnglishLang.Visible = false;
+            //    }
+            //    else if (Convert.ToString(Session["lang"]) == "it")
+            //    {
+            //        linkEnglishLang.Visible = true;
+            //        linkItalianoLang.Visible = false;
+            //    }
+            //}
+            //else
+            //{
+            //    linkItalianoLang.Visible = false;
+            //    linkEnglishLang.Visible = true;
+            //}
+            //#endregion
         }
     }
 }

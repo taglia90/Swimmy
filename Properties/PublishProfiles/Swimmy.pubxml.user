@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2015 16:37:51</publishTime>
     </File>
     <File Include="Account/Login.aspx">
-      <publishTime>10/15/2015 16:49:26</publishTime>
+      <publishTime>10/15/2015 17:18:02</publishTime>
     </File>
     <File Include="Account/Manage.aspx">
       <publishTime>06/22/2015 14:20:47</publishTime>
@@ -31,19 +31,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/22/2015 14:20:47</publishTime>
     </File>
     <File Include="Account/Ricerca.aspx">
-      <publishTime>08/23/2015 18:08:46</publishTime>
+      <publishTime>10/16/2015 16:33:18</publishTime>
     </File>
     <File Include="Account/Web.config">
       <publishTime>03/18/2015 16:37:51</publishTime>
     </File>
     <File Include="Annuncio/Annuncio.aspx">
-      <publishTime>07/01/2015 18:47:26</publishTime>
+      <publishTime>10/16/2015 17:13:23</publishTime>
     </File>
     <File Include="Annuncio/InserisciAnnuncio.aspx">
       <publishTime>10/13/2015 19:59:37</publishTime>
     </File>
     <File Include="Annuncio/ListaAnnunci.aspx">
       <publishTime>01/07/2015 18:51:17</publishTime>
+    </File>
+    <File Include="App_GlobalResources/language.it-IT.resx">
+      <publishTime>10/16/2015 18:55:32</publishTime>
+    </File>
+    <File Include="App_GlobalResources/language.resx">
+      <publishTime>10/16/2015 18:55:25</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>03/18/2015 16:37:59</publishTime>
@@ -127,7 +133,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/24/2015 14:16:04</publishTime>
     </File>
     <File Include="bin/Swimmy.dll">
-      <publishTime>10/15/2015 16:29:36</publishTime>
+      <publishTime>10/16/2015 18:57:27</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -355,7 +361,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/15/2015 15:43:32</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>10/15/2015 16:29:19</publishTime>
+      <publishTime>10/16/2015 18:55:32</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>08/23/2015 18:08:46</publishTime>
@@ -379,7 +385,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/18/2015 16:37:51</publishTime>
     </File>
     <File Include="Global.Master">
-      <publishTime>10/15/2015 13:37:10</publishTime>
+      <publishTime>10/16/2015 18:34:39</publishTime>
     </File>
     <File Include="Images/accent.png">
       <publishTime>03/18/2015 16:37:51</publishTime>
@@ -526,7 +532,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/09/2015 18:55:27</publishTime>
     </File>
     <File Include="NoSidebar.Master">
-      <publishTime>10/15/2015 17:00:16</publishTime>
+      <publishTime>10/15/2015 18:07:29</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/18/2015 16:38:11</publishTime>

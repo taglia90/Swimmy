@@ -8,17 +8,22 @@
     <!-- Features -->
 
     <header>
-        <h2>Stiamo arrivando!</h2>
-        <p>Rimani in contatto con noi!</p>
+        <h2>
+            <asp:Literal ID="Literal7" runat="server" Text="<%$Resources:language, homeTitolo%>" /></h2>
         <p>
-            Registrati per essere informato non appena il servizio sarà operativo e per poter essere tra i primi
-                     ad usufruire della nostra piattaforma!
+            <asp:Literal ID="Literal4" runat="server" Text="<%$Resources:language, homeSottotitolo1%>" /></p>
+        <p>
+            <asp:Literal ID="Literal5" runat="server" Text="<%$Resources:language, homeSottotitolo2%>" />
         </p>
     </header>
     <footer>
-        <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">Registrati</a>
-        <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">Accedi</a>
-        <a id="ricercaLink" runat="server" class="button" href="~/Account/Ricerca.aspx">Cerca una piscina</a>
+
+        <a id="registerLink" runat="server" class="button" href="~/Registrazione.aspx">
+            <asp:Literal ID="Literal1" runat="server" Text="<%$Resources:language, mnuRegistrati%>" /></a>
+        <a id="loginLink" runat="server" class="button" href="~/Account/Login.aspx">
+            <asp:Literal ID="Literal2" runat="server" Text="<%$Resources:language, mnuAccedi%>" /></a>
+        <a id="ricercaLink" runat="server" class="button" href="~/Account/Ricerca.aspx">
+            <asp:Literal ID="Literal3" runat="server" Text="<%$Resources:language, mnuCerca%>" /></a>
     </footer>
     <br />
     <div class="row">
@@ -26,35 +31,30 @@
             <a href="#" class="image featured">
                 <img src="./Images/pic07.jpg" alt="" /></a>
             <header>
-                <h3><a href="#">Guadagna con la tua piscina</a></h3>
+                <h3><a href="#"><asp:Literal ID="Literal6" runat="server" Text="<%$Resources:language, homeDescrizione10%>" /></a></h3>
             </header>
-            <p>
-                Swimmy ti aiuta a trovare piccoli gruppi di bagnanti, amici o famiglie, interessati a trascorrere
-                         qualche ora di relax nel tuo piccolo paradiso.
+            <p><asp:Literal ID="Literal8" runat="server" Text="<%$Resources:language, homeDescrizione11%>" />
+               
             </p>
         </article>
         <article class="4u special">
             <a href="#" class="image featured">
                 <img src="./Images/pic08.jpg" alt="" /></a>
             <header>
-                <h3><a href="#">Scegli quando ospitare i nuovi swimmer!</a></h3>
+                <h3><a href="#"><asp:Literal ID="Literal9" runat="server" Text="<%$Resources:language, homeDescrizione20%>" /></a></h3>
             </header>
-            <p>
-                Grazie all’agenda di Swimmy, gli swimmer potranno prenotare solo nei giorni in cui deciderai di rendere  
-                accessibile la tua piscina… e dopo sarai tu a scegliere se accettare le proposte che riceverai!       
-
+            <p><asp:Literal ID="Literal10" runat="server" Text="<%$Resources:language, homeDescrizione21%>" />
+               
             </p>
         </article>
         <article class="4u special">
             <a href="#" class="image featured">
                 <img src="./Images/pic09.jpg" alt="" /></a>
             <header>
-                <h3><a href="#">E tu dove ti vuoi tuffare?</a></h3>
+                <h3><a href="#"><asp:Literal ID="Literal11" runat="server" Text="<%$Resources:language, homeDescrizione30%>" /></a></h3>
             </header>
-            <p>
-                Splash! Vivi con noi questa nuova esperienza… Swimmy ti porta nel mondo delle #HomeSwimmingPool! Prepara  
-           infradito e asciugamano, ti stiamo aspettando!
-
+            <p><asp:Literal ID="Literal12" runat="server" Text="<%$Resources:language, homeDescrizione31%>" />
+                
             </p>
         </article>
     </div>
