@@ -30,6 +30,8 @@ namespace Swimmy.Account
             {
                 //userLabel.Text = nome;
             }
+
+            txtCitta.Attributes.Add("placeholder", "--Inserisci la città--");
         }
 
         protected void submitButton_Click(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Swimmy.Account
         protected void popolaProvinciaDDL(object sender, EventArgs e)
         {
             List<string> listaProvince = dba.GetProvinceDaRegione(regioneDDL.Text);
-            provinciaDDL.Items.Insert(0, "--Inserisci la provincia--");
+            listaProvince.Insert(0, "--Inserisci la provincia--");
             provinciaDDL.DataSource = listaProvince;
             provinciaDDL.DataBind();
             GetAnnunci();
@@ -52,7 +54,11 @@ namespace Swimmy.Account
         public List<DB.Annuncio> GetAnnunci()
         {
             listaAnnunci = new List<DB.Annuncio>();
-            listaAnnunci = dba.getListaAnnunci(regioneDDL.Text, provinciaDDL.Text, txtCitta.Text);
+            if (provinciaDDL.Text.Equals("--Inserisci la provincia--"))
+                listaAnnunci = dba.getListaAnnunci(regioneDDL.Text, "", txtCitta.Text);
+            else
+                listaAnnunci = dba.getListaAnnunci(regioneDDL.Text, provinciaDDL.Text, txtCitta.Text);
+
             listaAnnunciView.DataSource = listaAnnunci; //può essere ad esempio un Array o una List di stringhe
             listaAnnunciView.DataBind();
 

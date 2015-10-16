@@ -13,15 +13,6 @@ namespace Swimmy.Annuncio {
     public partial class Annuncio {
         
         /// <summary>
-        /// form control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form;
-        
-        /// <summary>
         /// titoloLabel control.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace Swimmy.Annuncio {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label titoloLabel;
+        
+        /// <summary>
+        /// foto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater foto;
         
         /// <summary>
         /// descrizioneLabel control.
@@ -74,15 +74,6 @@ namespace Swimmy.Annuncio {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label telefonoLabel;
-        
-        /// <summary>
-        /// foto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater foto;
         
         /// <summary>
         /// submitButton control.
